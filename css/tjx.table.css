@@ -1,0 +1,21 @@
+/*
+td.details-control {
+    background: url('../images/table/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('../images/table/details_close.png') no-repeat center center;
+}*/
+
+
+.tjx-table-details-control {
+    background: url('../images/table/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+.tjx-table-details-control-shown .tjx-table-details-control {
+    background: url('../images/table/details_close.png') no-repeat center center;
+}
+
+.tjx-table-md-3 {
+    width: 20%;
+}

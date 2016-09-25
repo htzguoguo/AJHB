@@ -1,0 +1,4 @@
+<-----System.NullReferenceException: Object reference not set to an instance of an object.
+   at TTSK.Web.AuthorityEntry.UserLogin.InitiateRoleCache()
+   at TTSK.Web.AuthorityEntry.UserLogin.InitiateCache()
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in E:\项目资料(8_1_2011)\40. 安全生产和环境保护地理信息系统项目\3. src\TJX.AJHB\AppWebSite\global.asax:line 16----->
