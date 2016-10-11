@@ -94,7 +94,7 @@
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <!-- BEGIN PORTLET-->
-            <div class="portlet light tasks-widget" style="height: 465px;">
+            <div class="portlet light tasks-widget" style="height: 495px;">
                 <div class="portlet-title">
                     <div class="caption caption-md">
                         <i class="icon-bar-chart theme-font-color hide"></i>
@@ -118,7 +118,7 @@
                             <!-- START TASK LIST -->
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <table class="table mtable" >
+                                    <table class="table table-striped     dataTable  " >
                                         <thead>
                                         <tr>
                                             <td><h5 class="font-grey-sharp bold text-muted">企业名称</h5></td>
@@ -146,10 +146,11 @@
                                     </table>
                                 </div>
                             </div>
-                        <div    style="bottom:25px;right: 20px;   position: absolute;">
-                            <label id="checkpageup" class="btn"><i class="fa fa-angle-double-left"></i></label>
-                            <label id="checknum" class="btn">12</label>
-                            <label id="checkpagedown" class="btn"><i class="fa fa-angle-double-right"></i></label>
+
+                        <div    style="bottom:30px;right: 40px;   position: absolute;">
+                            <label id="checkpageup" class="btn  btn-xs grey-salsa" style="height: 25px;width: 30px;">&nbsp;&nbsp;&nbsp;<i class="fa  fa-angle-left"></i>&nbsp;&nbsp;&nbsp;</label>
+                            <label id="checknum" class="btn" >12</label>
+                            <label id="checkpagedown" class="btn  btn-xs grey-salsa" style="height: 25px;width: 30px;">&nbsp;&nbsp;&nbsp;<i class="fa blue fa-angle-right"></i>&nbsp;&nbsp;&nbsp;</label>
                         </div>
                         <!-- END START TASK LIST -->
                 </div>
@@ -159,7 +160,7 @@
         </div>
         <div class="col-md-6 col-sm-12">
             <!-- BEGIN PORTLET-->
-            <div class="portlet light tasks-widget" style="height: 465px;">
+            <div class="portlet light tasks-widget" style="height: 495px;">
                 <div class="portlet-title">
                     <div class="caption caption-md">
                         <i class="icon-bar-chart theme-font-color hide"></i>
@@ -181,7 +182,7 @@
                     <div class="task-content">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <table class="table mtable" >
+                                    <table class="table table-striped" >
                                         <thead>
                                         <tr>
                                             <td><h5 class="font-grey-sharp bold text-muted">企业名称</h5></td>
@@ -202,80 +203,14 @@
                                             <td><div><h5 class="font-grey-sharp text-muted" tjx-data-field="Holder">张石岭</h5></div></td>
                                             <td><div><h5 class="font-grey-sharp text-muted" tjx-data-field="ExpirationDate">2016-06(已超期)</h5></div></td>
                                         </tr>
-                                   <!--     <tr>
-                                            <td>
-                                                <button type="button" class="btn btn-link btn-xs" title="详细"
-                                                        data-container="body" data-trigger="hover focus" tjx-data-display="popover" data-placement="right"
-                                                        data-content="<p>企业名称：天津新泰石油化工有限公司</p><p>有效日期：2016-04(已超期)</p><p>区域负责人：孟学斌</p><p>类别：安全管理人员</p>
-                                                        <p>姓名：孙志喜</p><p>证书名称：安全资格证书</p><p>证号：13112081602461</p><p>发证单位：天津市安全生产监督管理局</p>">
-                                                    <div><h5 class="font-grey-sharp text-muted">天津新泰石油化工有限公司</h5></div>
-                                                </button>
-                                            </td>
-                                            <td><div><h5 class="font-grey-sharp text-muted">孙志喜</h5></div></td>
-                                            <td><div><h5 class="font-grey-sharp text-muted">2016-04(已超期)</h5></div></td></tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn btn-link btn-xs" title="详细"
-                                                        data-container="body" data-trigger="hover focus" tjx-data-display="popover" data-placement="right"
-                                                        data-content="<p>企业名称：天津正达科技有限公司</p><p>有效日期：2016-03(已超期)</p><p>区域负责人：薄荫军</p><p>类别：特种设备作业人员</p>
-                                                        <p>姓名：韩忠泽</p><p>证书名称：场内机动车辆驾驶</p><p>证号：BS2012N00349</p><p>发证单位：天津市滨海新区质量技术监督局</p>">
-                                                    <div><h5 class="font-grey-sharp text-muted">天津正达科技有限公司</h5></div>
-                                                </button>
-                                            </td>
-                                            <td><div><h5 class="font-grey-sharp text-muted">韩忠泽</h5></div></td>
-                                            <td><div><h5 class="font-grey-sharp text-muted">2016-03(已超期)</h5></div></td></tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn btn-link btn-xs" title="详细"
-                                                        data-container="body" data-trigger="hover focus" tjx-data-display="popover" data-placement="right"
-                                                        data-content="<p>企业名称：雪佛龙（天津）润滑油有限公司</p><p>有效日期：2016-01(已超期)</p><p>区域负责人：孟学斌</p><p>类别：主要负责人</p>
-                                                        <p>姓名：肖珊</p><p>证书名称：安全资格证书</p><p>证号：13112212100178</p><p>发证单位：天津市安全生产监督管理局</p>">
-                                                    <div><h5 class="font-grey-sharp text-muted">雪佛龙（天津）润滑油有限公司</h5></div>
-                                                </button>
-                                            </td>
-                                            <td><div><h5 class="font-grey-sharp text-muted">肖珊</h5></div></td>
-                                            <td><div><h5 class="font-grey-sharp text-muted">2016-01(已超期)</h5></div></td></tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn btn-link btn-xs" title="详细"
-                                                        data-container="body" data-trigger="hover focus" tjx-data-display="popover" data-placement="right"
-                                                        data-content="<p>企业名称：天津保利佐川有限公司</p><p>有效日期：2012-12(已超期)</p><p>区域负责人：孟学斌</p><p>类别：特种设备作业人员</p>
-                                                        <p>姓名：肖书明</p><p>证书名称：叉车证</p><p>证号：120222198610065411</p><p>发证单位：天津天保职业培训学校</p>">
-                                                    <div><h5 class="font-grey-sharp text-muted">天津保利佐川有限公司</h5></div>
-                                                </button>
-                                            </td>
-                                            <td><div><h5 class="font-grey-sharp text-muted">肖书明</h5></div></td>
-                                            <td><div><h5 class="font-grey-sharp text-muted">2012-12(已超期)</h5></div></td></tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn btn-link btn-xs" title="详细"
-                                                        data-container="body" data-trigger="hover focus" tjx-data-display="popover" data-placement="right"
-                                                        data-content="<p>企业名称：招商局物流（天津）有限公司</p><p>有效日期：2012-12(已超期)</p><p>区域负责人：孟学斌</p><p>类别：特种设备作业人员</p>
-                                                        <p>姓名：肖书明</p><p>证书名称：叉车证</p><p>证号：120222198610065411</p><p>发证单位：天津天保职业培训学校</p>">
-                                                    <div><h5 class="font-grey-sharp text-muted">招商局物流（天津）有限公司</h5></div>
-                                                </button>
-                                            </td>
-                                            <td><div><h5 class="font-grey-sharp text-muted">肖书明</h5></div></td>
-                                            <td><div><h5 class="font-grey-sharp text-muted">2012-12(已超期)</h5></div></td></tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn btn-link btn-xs" title="详细"
-                                                        data-container="body" data-trigger="hover focus" tjx-data-display="popover" data-placement="right"
-                                                        data-content="<p>企业名称：赛维（天津）供应链管理有限公司</p><p>有效日期：2012-12(已超期)</p><p>区域负责人：孟学斌</p><p>类别：特种设备作业人员</p>
-                                                        <p>姓名：肖书明</p><p>证书名称：叉车证</p><p>证号：120222198610065411</p><p>发证单位：天津天保职业培训学校</p>">
-                                                    <div><h5 class="font-grey-sharp text-muted">赛维（天津）供应链管理有限公司</h5></div>
-                                                </button>
-                                            </td>
-                                            <td><div><h5 class="font-grey-sharp text-muted">肖书明</h5></div></td>
-                                            <td><div><h5 class="font-grey-sharp text-muted">2012-12(已超期)</h5></div></td></tr>-->
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                        <div    style="bottom:25px;right: 20px;   position: absolute;">
-                            <label id="certpageup" class="btn"><i class="fa fa-angle-double-left"></i></label>
+                        <div    style="bottom:30px;right: 40px;   position: absolute;">
+                            <label id="certpageup" class="btn  btn-xs grey-salsa" style="height: 25px;width: 30px;">&nbsp;&nbsp;&nbsp;<i class="fa  fa-angle-left"></i>&nbsp;&nbsp;&nbsp;</label>
                             <label id="certnum" class="btn">12</label>
-                            <label id="certpagedown" class="btn"><i class="fa fa-angle-double-right"></i></label>
+                            <label id="certpagedown" class="btn  btn-xs grey-salsa" style="height: 25px;width: 30px;">&nbsp;&nbsp;&nbsp;<i class="fa blue fa-angle-right"></i>&nbsp;&nbsp;&nbsp;</label>
                         </div>
                     </div>
 
@@ -288,7 +223,7 @@
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <!-- BEGIN PORTLET-->
-            <div class="portlet light tasks-widget" style="height: 465px;">
+            <div class="portlet light tasks-widget" style="height: 495px;">
                 <div class="portlet-title">
                     <div class="caption caption-md">
                         <i class="icon-bar-chart theme-font-color hide"></i>
@@ -309,7 +244,7 @@
                     <div class="task-content">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <table class="table mtable" >
+                                    <table class="table table-striped" >
                                         <thead>
                                         <tr >
                                             <td><h5 class="font-grey-sharp bold text-muted">企业名称</h5></td>
@@ -334,10 +269,10 @@
                                     </table>
                                 </div>
                             </div>
-                        <div    style="bottom:25px;right: 20px;   position: absolute;">
-                            <label id="specialpageup" class="btn"><i class="fa fa-angle-double-left"></i></label>
+                        <div    style="bottom:30px;right: 40px;   position: absolute;">
+                            <label id="specialpageup" class="btn  btn-xs grey-salsa" style="height: 25px;width: 30px;">&nbsp;&nbsp;&nbsp;<i class="fa  fa-angle-left"></i>&nbsp;&nbsp;&nbsp;</label>
                             <label id="specialnum" class="btn">12</label>
-                            <label id="specialpagedown" class="btn"><i class="fa fa-angle-double-right"></i></label>
+                            <label id="specialpagedown" class="btn  btn-xs grey-salsa" style="height: 25px;width: 30px;">&nbsp;&nbsp;&nbsp;<i class="fa blue fa-angle-right"></i>&nbsp;&nbsp;&nbsp;</label>
                         </div>
                     </div>
 
@@ -347,7 +282,7 @@
         </div>
         <div class="col-md-6 col-sm-12">
             <!-- BEGIN PORTLET-->
-            <div class="portlet light tasks-widget" style="height: 465px;">
+            <div class="portlet light tasks-widget" style="height: 495px;">
                 <div class="portlet-title">
                     <div class="caption caption-md">
                         <i class="icon-bar-chart theme-font-color hide"></i>
@@ -369,7 +304,7 @@
                     <div class="task-content">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <table class="table mtable" >
+                                    <table class="table table-striped" >
                                         <thead>
                                         <tr >
                                             <td><h5 class="font-grey-sharp bold text-muted">企业名称</h5></td>
@@ -394,10 +329,10 @@
                                     </table>
                                 </div>
                             </div>
-                        <div    style="bottom:25px;right: 20px;   position: absolute;">
-                            <label id="inspectpageup" class="btn"><i class="fa fa-angle-double-left"></i></label>
+                        <div    style="bottom:30px;right: 40px;   position: absolute;">
+                            <label id="inspectpageup" class="btn  btn-xs grey-salsa" style="height: 25px;width: 30px;">&nbsp;&nbsp;&nbsp;<i class="fa  fa-angle-left"></i>&nbsp;&nbsp;&nbsp;</label>
                             <label id="inspectnum" class="btn">12</label>
-                            <label id="inspectpagedown" class="btn"><i class="fa fa-angle-double-right"></i></label>
+                            <label id="inspectpagedown" class="btn  btn-xs grey-salsa" style="height: 25px;width: 30px;">&nbsp;&nbsp;&nbsp;<i class="fa blue fa-angle-right"></i>&nbsp;&nbsp;&nbsp;</label>
                         </div>
                     </div>
 

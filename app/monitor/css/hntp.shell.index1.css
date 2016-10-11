@@ -230,7 +230,8 @@ body {
 
 .anchorBL{display:none;}
 
-#mviewl{width:642px;
+#mviewl{
+    width:642px;
     height:500px;
     margin:auto;
 }

@@ -200,6 +200,49 @@
         ]
       },
       {
+        "name": "滨海新区雪花啤酒有限公司",
+        "url": "滨海新区雪花啤酒有限公司",
+        "type" : "pp",
+        "icon": "icon-camcorder",
+        "isActive": false,
+        "deviceid": "1000326$1$0$11",
+        "links": [
+          {
+            "name": "出入口",
+            "url": "滨海新区雪花啤酒有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000326$1$0$8"
+          },
+          {
+            "name": "氨气罐",
+            "url": "滨海新区雪花啤酒有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000326$1$0$9"
+          },
+          {
+            "name": "制冷车间",
+            "url": "滨海新区雪花啤酒有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000326$1$0$10"
+          },
+          {
+            "name": "值班室",
+            "url": "滨海新区雪花啤酒有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000326$1$0$12"
+          }
+
+        ]
+      },
+      {
         "name": "振华加油站",
         "url": "天津港保税区振华加油站",
         "type" : "pp",

@@ -77,6 +77,8 @@ tjx.data.documents = (function () {
 
     initFileCatalog = function (event, fileid ) {
         tjx.util.io.getJsonFile( configMap.url.file_url, onFilesCatalogSuccess );
+
+
     }
 
     /*initFileCatalog = function (event, fileid ) {

@@ -73,6 +73,11 @@ tjx.app.documents.list = (function () {
 //-------------------- END EVENT HANDLERS --------------------
 //------------------- BEGIN PUBLIC METHODS -------------------
 
+    /**
+     *
+     * @param event
+     * @param data
+     */
     onFilesCatalogSuccess = function ( event, data ) {
         var tbl = jqueryMap.$tbl_files,
             filekey,

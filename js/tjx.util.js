@@ -36,7 +36,8 @@ tjx.util = (function () {
         buildTableData, copyObj, getObjPropertyNameAndValues,
         setFilesFromData,
         setFormValuesFromData,
-        buildSingleObjectFromData
+        buildSingleObjectFromData,
+        hideJs
         ;
 
     loadXML = function  (xmlpath ) {
@@ -89,7 +90,7 @@ tjx.util = (function () {
         var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
             results = regex.exec(sear);
         return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
+    };
 
     getSearchFromUrl = function ( url ) {
         var m = '?';
@@ -99,7 +100,7 @@ tjx.util = (function () {
                 return  m + c[1];
             }
         }
-    }
+    };
 
     // Begin public method /setConfigMap/
     // Purpose : Common code to set configs in feature modules
@@ -276,6 +277,14 @@ tjx.util = (function () {
         }
     }
 
+    /**
+     * 
+     * @param $block
+     */
+    hideJs = function ( $block ) {
+        $block.html( '' );
+    }
+
     // End public method /getValuesFromFormInput/
 
     return {
@@ -293,6 +302,7 @@ tjx.util = (function () {
         getObjPropertyNameAndValues : getObjPropertyNameAndValues,
         setFilesFromData : setFilesFromData,
         setFormValuesFromData : setFormValuesFromData,
-        buildSingleObjectFromData : buildSingleObjectFromData
+        buildSingleObjectFromData : buildSingleObjectFromData,
+        hideJs : hideJs
     };
 }());
