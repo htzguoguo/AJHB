@@ -23,8 +23,8 @@ tjx.index1 = (function () {
                 _prefixWidth : 420,
                 _navWidth : 20,
                 _opWidth : 93,
-                _navLeft : "<li><span class=\"tjx-shell-index1-head-em\"><a href=\"javascript:tjx.index1.navLeft()\" ><img src=\"images/index1/Lfog.png\" width=\"10\" height=\"16\" /></a></span></li>",
-                _navRight : "<li><span class=\"tjx-shell-index1-head-em\"><a href=\"javascript:tjx.index1.navRight()\" ><img src=\"images/index1/Rfog.png\" width=\"10\" height=\"16\" /></a></span></li>"
+                _navLeft : "<li><span class=\"tjx-shell-index1-head-em-left\"><a href=\"javascript:tjx.index1.navLeft()\" ><img src=\"images/index1/Lfog.png\" width=\"10\" height=\"16\" /></a></span></li>",
+                _navRight : "<li><span class=\"tjx-shell-index1-head-em-right\"><a href=\"javascript:tjx.index1.navRight()\" ><img src=\"images/index1/Rfog.png\" width=\"10\" height=\"16\" /></a></span></li>"
             }
 
         },

@@ -32,7 +32,18 @@
     padding-left:20px;
 }
 .tjx-shell-index1-head-menu ul ,.tjx-shell-index1-head-menu li{ padding:0; margin:0; list-style:none;}
-.tjx-shell-index1-head-em{ width:20px; position:relative;left:20px;}
+.tjx-shell-index1-head-em-left ,.tjx-shell-index1-head-em-right {
+    width:20px;
+    position:relative;
+    vertical-align: middle;
+}
+.tjx-shell-index1-head-em-left {
+    right:20px;
+}
+.tjx-shell-index1-head-em-right {
+    left:20px;
+}
+
 .tjx-shell-index1-head-menu li{ float:left;height:88px; line-height:88px; }
 
 

@@ -6,7 +6,7 @@ tjx.app.monitor.camera= (function () {
     var
         configMap = {
             camera_setting : {
-                wnd_num : 4
+                wnd_num : 6
             }
         },
         stateMap = {

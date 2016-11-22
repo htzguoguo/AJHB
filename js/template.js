@@ -14,6 +14,7 @@
 /*global $, tjx */
 
 tjx.template = (function () {
+    'use strict';
     //- - - - - - - - - - - - - -  - - - - - - - -   BEGIN MODULE SCAPE VARIABLES  - - - - - - - -  - - - - - - - -  - - - - - - - -  - - - - - - - -
     var
         configMap = {
@@ -29,7 +30,7 @@ tjx.template = (function () {
     // example : getTrimmedString
     //- - - - - - - - - - - - - -  - - - - - - - -   END UTILITY METHODS  - - - - - - - -  - - - - - - - -  - - - - - - - -  - - - - - - - - - - - - -
 
-    //- - - - - - - - - - - - - -  - - - - - - - -   BEGIN DOM METHODS  - - - - - - - -  - - - - - - - -  - - - - - - - -  - - - - - - - - - - - - - -
+    //- - - - - - - - - - - - - -  - - - - - - - -   BEGIN PUBLIC DOM METHODS  - - - - - - - -  - - - - - - - -  - - - - - - - -  - - - - - - - - - - - - - -
     // Begin DOM method /setJqueryMap/
     setJqueryMap = function () {
         var $container = stateMap.$container;
@@ -38,11 +39,21 @@ tjx.template = (function () {
         };
     };
     // End DOM method /setJqueryMap/
-    //- - - - - - - - - - - - - -  - - - - - - - -   END DOM METHODS  - - - - - - - -  - - - - - - - -  - - - - - - - -  - - - - - - - - - - - - - - -
+    //- - - - - - - - - - - - - -  - - - - - - - -   END PUBLIC DOM METHODS  - - - - - - - -  - - - - - - - -  - - - - - - - -  - - - - - - - - - - - - - - -
 
-    //- - - - - - - - - - - - - -  - - - - - - - -   BEGIN EVENT HANDLERS  - - - - - - - -  - - - - - - - -  - - - - - - - -  - - - - - - - - - - - - -
+    //- - - - - - - - - - - - - -  - - - - - - - -   BEGIN PRIVATE DOM METHODS  - - - - - - - -  - - - - - - - -  - - - - - - - -  - - - - - - - - - - - - - -
+    // Begin DOM method /setJqueryMap/
+
+    // End DOM method /setJqueryMap/
+    //- - - - - - - - - - - - - -  - - - - - - - -   END PRIVATE DOM METHODS  - - - - - - - -  - - - - - - - -  - - - - - - - -  - - - - - - - - - - - - - - -
+
+    //- - - - - - - - - - - - - -  - - - - - - - -   BEGIN USER EVENT HANDLERS  - - - - - - - -  - - - - - - - -  - - - - - - - -  - - - - - - - - - - - - -
     // example: onClickButton = ...
-    //- - - - - - - - - - - - - -  - - - - - - - -   END EVENT HANDLERS  - - - - - - - -  - - - - - - - -  - - - - - - - -  - - - - - - - - - - - - - -
+    //- - - - - - - - - - - - - -  - - - - - - - -   END USER EVENT HANDLERS  - - - - - - - -  - - - - - - - -  - - - - - - - -  - - - - - - - - - - - - - -
+
+    //- - - - - - - - - - - - - -  - - - - - - - -   BEGIN MODEL EVENT HANDLERS  - - - - - - - -  - - - - - - - -  - - - - - - - -  - - - - - - - - - - - - -
+    // example: onClickButton = ...
+    //- - - - - - - - - - - - - -  - - - - - - - -   END MODEL EVENT HANDLERS  - - - - - - - -  - - - - - - - -  - - - - - - - -  - - - - - - - - - - - - - -
 
     //- - - - - - - - - - - - - -  - - - - - - - -   BEGIN PUBLIC METHODS  - - - - - - - -  - - - - - - - -  - - - - - - - -  - - - - - - - - - - - - -
     // Begin public method /configModule/
@@ -87,6 +98,10 @@ tjx.template = (function () {
         // and initialized, otherwise they will not be ready to handle
         // the trigger event, which is used to ensure the anchor
         // is considered on-load
+
+        // Have $list_box subscribe to jquery global event
+
+        // bind user input events
 
         return true;
     };

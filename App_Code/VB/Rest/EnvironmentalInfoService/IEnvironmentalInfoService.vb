@@ -9,5 +9,9 @@ Namespace VB.Rest.EnvironmentalInfoService
        <WebGet(responseformat:=WebMessageFormat.Json, UriTemplate:="environmental/{name}")>
         Function GetEnvironmentalInfo(ByVal name As String) As TJX.AJHB.AppData.Contracts.Environmental.EnvironmentalContract
 
+        <OperationContract()> _
+       <WebInvoke(Method:="POST", RequestFormat:=WebMessageFormat.Json, ResponseFormat:=WebMessageFormat.Json, UriTemplate:="lims")> _
+        Function AddLims(ByVal item As Environmental.EmissionMonitoringContract) As ResponseContract
+
     End Interface
 End Namespace
