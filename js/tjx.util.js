@@ -145,7 +145,7 @@ tjx.util = (function () {
             }
         }
         return newobj;
-    }
+    };
 
     getObjPropertyNameAndValues = function ( obj, sepproperty , sepvalue ) {
         var newobj = new Array(  );
@@ -156,7 +156,7 @@ tjx.util = (function () {
             }
         }
         return newobj.join( sepvalue );
-    }
+    };
 
     buildTableData = function ( fields, data ) {
         var result = new Array();
@@ -164,11 +164,11 @@ tjx.util = (function () {
             var myObj = new Object();
             $.each( row, function ( j, item  ) {
                 myObj[ fields[j].data ] = item;
-            } )
+            } );
             result.push( myObj );
         } );
         return result;
-    }
+    };
 
     setValuesFromData = function ( $container, data ) {
         if ( $container && data ){
@@ -179,7 +179,7 @@ tjx.util = (function () {
 
             } );
         }
-    }
+    };
 
     setFormValuesFromData = function ( $container, data  ) {
         if ( $container && data ){
@@ -199,7 +199,7 @@ tjx.util = (function () {
                 }
             } );
         }
-    }
+    };
 
     setFilesFromData = function ( $container, data ) {
         if ( $container && data ){
@@ -216,7 +216,7 @@ tjx.util = (function () {
                }
             } );
         }
-    }
+    };
 
     // Begin public method /getValuesFromFormInput/
     getValuesFromFormInput = function ( $container ) {
@@ -251,7 +251,7 @@ tjx.util = (function () {
             } );
         }
         return result;
-    }
+    };
 
     buildSingleObjectFromData = function ( data, index ) {
         var ind = 0;
@@ -275,7 +275,7 @@ tjx.util = (function () {
                 return result;
             }
         }
-    }
+    };
 
     /**
      * 
@@ -283,7 +283,7 @@ tjx.util = (function () {
      */
     hideJs = function ( $block ) {
         $block.html( '' );
-    }
+    };
 
     // End public method /getValuesFromFormInput/
 

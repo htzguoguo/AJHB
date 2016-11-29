@@ -39,17 +39,17 @@ tjx.shell = (function () {
     subscribeEvent = function ( eventname, callback ) {
         jqueryMap.$container.bind( eventname, callback );
       /*  $.gevent.subscribe( jqueryMap.$container, eventname , callback );*/
-    }
+    };
 
     unsubscribeEvent = function ( eventname  ) {
         jqueryMap.$container.unbind( eventname   );
       /*  $.gevent.unsubscribe( jqueryMap.$container, eventname   );*/
-    }
+    };
 
     publishEvent =  function ( eventname, parameter ) {
         jqueryMap.$container.trigger( eventname, parameter );
         /*  $.gevent.subscribe( jqueryMap.$container, eventname , callback );*/
-    }
+    };
 
 
 
@@ -70,27 +70,27 @@ tjx.shell = (function () {
     saveSiteData = function ( name, value ) {
         $.removeCookie(name, { path: '/' });
         $.cookie(name, value, {  path: '/' });
-    }
+    };
 
     getSiteData = function ( name ) {
        return  $.cookie(name);
-    }
+    };
 
     currentUserChsName = function (  ) {
        return  getSiteData( 'username' );
-    }
+    };
 
     setSelectedContainer = function ( $container ) {
         stateMap.selected_container = $container;
-    }
+    };
 
     getSelectedContainer= function ( $container ) {
        return  stateMap.selected_container  ;
-    }
+    };
 
     getShellContainer = function (  ) {
         return  jqueryMap.$container;
-    }
+    };
 
 // Begin public method /configModule/
 // Purpose : Adjust configuration of allowed keys

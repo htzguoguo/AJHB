@@ -89,7 +89,7 @@ tjx.home = (function () {
                 }
             });
         }
-    }
+    };
 
   /*  initCharts = function (  ) {
         var chart = AmCharts.makeChart("chart_6", {
@@ -190,7 +190,7 @@ tjx.home = (function () {
 
     redrawCharts =  function(  ) {
         dashboardMainChart.resizeHandler();
-    }
+    };
 
     initMiniCharts =  function(  ) {
 
@@ -234,7 +234,7 @@ tjx.home = (function () {
             barColor: '#5C9BD1',
             negBarColor: '#e02222'
         });
-    }
+    };
 
     initDashboardWidget = function (  ) {
         jqueryMap.$task.change(function() {
@@ -244,7 +244,7 @@ tjx.home = (function () {
                 $(this).parents('li').removeClass("task-done");
             }
         });
-    }
+    };
 
    /* initJQVMAP =  function(  ) {
 
@@ -434,13 +434,13 @@ tjx.home = (function () {
          } );
          } ).draw();*/
 
-    }
+    };
 
     configTableStyle = function (  ) {
         jqueryMap.$table.find('tr').each(function(){ //for each row
             $(this).children('td , th').css('text-align', 'center');  //center the third column.
         });
-    }
+    };
 
     initIndexData = function ( data ) {
         if ( data ) {
@@ -449,7 +449,7 @@ tjx.home = (function () {
 
             } )
         }
-    }
+    };
 
     setDataTable = function () {
         var search = {
@@ -468,7 +468,7 @@ tjx.home = (function () {
             fail : onFail
         };
         tjx.data.rating.enterpriserating.getTableData( arg_map );
-    }
+    };
 
     onSuccess = function ( data ) {
         if ( data ){
@@ -478,11 +478,11 @@ tjx.home = (function () {
             configTableStyle(  );
             tjx.util.ui.stopPageLoading(  );
         }
-    }
+    };
 
     onFail = function ( data ) {
 
-    }
+    };
 
 //-------------------- END EVENT HANDLERS --------------------
 //------------------- BEGIN PUBLIC METHODS -------------------

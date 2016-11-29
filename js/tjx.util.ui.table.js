@@ -104,7 +104,7 @@ tjx.util.ui.table = (function () {
         p.on("show.bs.popover", function(e){
             $( this ).data("bs.popover").tip().css({"max-width": "500px"});
         });
-    }
+    };
 
     configModule = function ( input_map ) {
         tjx.util.setConfigMap({
@@ -119,12 +119,12 @@ tjx.util.ui.table = (function () {
     getNoSearchPagingTableOptions = function (  ) {
         var options = tjx.util.copyObj( stateMap.nosearchnopaging_table_options );
         return options;
-    }
+    };
 
     getStandardTableOptions =  function (  ) {
         var options = tjx.util.copyObj( stateMap.stardard_table_options );
         return options;
-    }
+    };
 
     getCustomTableOptions =  function ( issearch, ispage, pagelength ) {
         var options = tjx.util.copyObj( stateMap.stardard_table_options );
@@ -132,19 +132,19 @@ tjx.util.ui.table = (function () {
         options.paginate = ispage;
         options.pageLength = pagelength;
         return options;
-    }
+    };
 
     setTableContentCenter = function ( $table ) {
         $table.find('tr').each(function(){ //for each row
             $(this).children('td , th').css('text-align', 'center');  //center the third column.
         });
-    }
+    };
 
     clearDataTable = function ( $table ) {
         if ( $table.dataTable ){
             $table.DataTable().clear().destroy();
         }
-    }
+    };
 
     //函数说明：合并指定表格（表格id为_w_table_id）指定列（列数为_w_table_colnum）的相同文本的相邻单元格 
     //参数说明：_w_table_id 为需要进行合并单元格的表格的id。如在HTMl中指定表格 id="data" ，此参数应为 #data  
@@ -176,7 +176,7 @@ tjx.util.ui.table = (function () {
                 }
             }
         });
-    }
+    };
 
     fillTableWithData = function ( $table_container, $temp_tr, data ) {
         $table_container.find( 'tr:not( .display-hide )').remove();
@@ -195,7 +195,7 @@ tjx.util.ui.table = (function () {
             }
             $table_container.append( con );
         }
-    }
+    };
 
 // Begin public method /initModule/
 // Purpose : Initializes module

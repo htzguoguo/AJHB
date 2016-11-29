@@ -20,7 +20,7 @@ tjx.data = {  };
 tjx.data.detail = {  };
 tjx.data.onsitecheck = {  };
 tjx.data.rating = {  };
-tjx.data.currentsituation = {}
+tjx.data.currentsituation = {};
 
 tjx.app = { };
 

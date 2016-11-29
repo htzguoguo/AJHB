@@ -35,11 +35,11 @@ function Guid(g){
 
         }
 
-    }
+    };
 
     //Guid对象的标记
 
-    this.IsGuid = function(){}
+    this.IsGuid = function(){};
 
     //返回 Guid 类的此实例值的 String 表示形式。
 
@@ -67,7 +67,7 @@ function Guid(g){
 
         }
 
-    }
+    };
 
     //由字符串加载
 
@@ -93,7 +93,7 @@ function Guid(g){
 
         }
 
-    }
+    };
 
     //由其他类型加载
 
@@ -107,7 +107,7 @@ function Guid(g){
 
         }
 
-    }
+    };
 
     /*
 
