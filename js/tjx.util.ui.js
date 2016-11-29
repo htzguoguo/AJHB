@@ -192,7 +192,7 @@ tjx.util.ui = (function () {
                 oTable.fnOpen(nTr, fnFormatDetails(oTable, nTr), 'details');
             }
         });
-    };
+    }
 
 //---------------------- END DOM METHODS ---------------------
 //------------------- BEGIN EVENT HANDLERS -------------------
@@ -216,11 +216,11 @@ tjx.util.ui = (function () {
                 callback();
             }
         });
-    };
+    }
 
     initFileUpload = function ( $container ) {
         $container.load( configMap.photo_template_url );
-    };
+    }
 
     startPageLoading =  function(options) {
         if (options && options.animate) {
@@ -230,11 +230,11 @@ tjx.util.ui = (function () {
             $('.page-loading').remove();
             $('body').append('<div class="page-loading"><img src="images/ui/loading-spinner-blue.gif"/>&nbsp;&nbsp;<span>' + (options && options.message ? options.message : '加载中...') + '</span></div>');
         }
-    };
+    }
 
     stopPageLoading = function() {
         $('.page-loading, .page-spinner-bar').remove();
-    };
+    }
 
     initSpecificDate = function ( $date, defaultdate ) {
         $.fn.datepicker.defaults.language = 'zh-CN';
@@ -246,7 +246,7 @@ tjx.util.ui = (function () {
             });
         }
         $date.find('[type=text]').val(defaultdate.getFullYear() + '-' + (defaultdate.getMonth() + 1) + '-' + defaultdate.getDate());
-    };
+    }
 
     initDate = function ( $container, defaultdate ) {
 
@@ -260,7 +260,7 @@ tjx.util.ui = (function () {
             });
         }
         $container.find('.date-picker [type=text]').val(defaultdate.getFullYear() + '-' + (defaultdate.getMonth() + 1) + '-' + defaultdate.getDate());
-    };
+    }
 
     initDateTime = function ( $container, defaultdate ) {
         $.fn.datetimepicker.defaults.language = 'zh-CN';
@@ -271,7 +271,7 @@ tjx.util.ui = (function () {
             pickerPosition: (false ? "bottom-right" : "bottom-left")
         });
         $container.find('.form_datetime [type=text]').val(defaultdate.getFullYear() + '-' + (defaultdate.getMonth() + 1) + '-' + defaultdate.getDate());
-    };
+    }
 
 
 
@@ -288,7 +288,7 @@ tjx.util.ui = (function () {
         $('html,body').animate({
             scrollTop: pos
         }, 'slow');
-    };
+    }
 
 
     showAlert = function ( title, content ) {
@@ -300,7 +300,7 @@ tjx.util.ui = (function () {
             jqueryMap.$container.append(temp);
             $(configMap.alert_html_id).modal();
         }
-    };
+    }
 
     showSuccess = function ( title, content ) {
         
@@ -315,7 +315,7 @@ tjx.util.ui = (function () {
          
             $(configMap.success_html_id).modal();
         }
-    };
+    }
 
     showConfirm = function ( title, content, onAfter  ) {
         if ( jqueryMap.$container ){
@@ -328,7 +328,7 @@ tjx.util.ui = (function () {
             jqueryMap.$container.find('#confirmok').bind( 'click', onAfter );
             $(configMap.confirm_html_id).modal();
         }
-    };
+    }
 
     isInputEmpty = function ( $input )  {
 
@@ -342,7 +342,7 @@ tjx.util.ui = (function () {
         {
             return false;
         }
-    };
+    }
 
     initSelectByArray = function ( $select, data , isdelete ) {
         if ( isdelete ){
@@ -352,7 +352,7 @@ tjx.util.ui = (function () {
             $select.append('<option value="' + item + '">' +  item + '</option>');
         } );
         $select.find('option:first').attr('selected','selected');
-    };
+    }
 
     initSelectBySet = function ( $select, data, isdelete ) {
         if ( isdelete ){
@@ -362,11 +362,11 @@ tjx.util.ui = (function () {
             $select.append('<option value="' + item.value + '">' +  item.name + '</option>');
         } );
         $select.find('option:first').attr('selected','selected');
-    };
+    }
 
     getClientFileName = function ( filePath ) {
        return filePath.split(/[\\\/]/g).pop()
-    };
+    }
 
 // Begin public method /configModule/
 // Purpose : Adjust configuration of allowed keys

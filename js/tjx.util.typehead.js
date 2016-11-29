@@ -90,7 +90,7 @@ tjx.util.typehead = (function () {
                     });
             }
         });
-    };
+    }
 
 //---------------------- END DOM METHODS ---------------------
 //------------------- BEGIN EVENT HANDLERS -------------------

@@ -114,11 +114,11 @@ tjx.index3 = (function () {
                 }
             });
         })
-    };
+    }
 
     function fail(result) {
 
-    };
+    }
 
     thirdlinkClick = function ( n, i, title ) {
 
@@ -153,11 +153,11 @@ tjx.index3 = (function () {
 
         //jqueryMap.$thrcontent.load( 'test2.html' );
 
-    };
+    }
 
     setBootstrapLanguage = function () {
 
-    };
+    }
 
 
 //-------------------- END UTILITY METHODS -------------------
@@ -181,19 +181,19 @@ tjx.index3 = (function () {
     menuClickTrigger = function ( title ) {
         
         jqueryMap.$thrmenu.find( 'a[tjx-menu-text=' + title +  ']').trigger('click');
-    };
+    }
 
     getChsUser = function () {
         return stateMap.current_chsuser;
-    };
+    }
 
     getTitle = function (  ) {
         return stateMap.select_title;
-    };
+    }
 
     getGUID = function (  ) {
         return stateMap.select_guid;
-    };
+    }
 
 // Begin public method /configModule/
 // Purpose : Adjust configuration of allowed keys

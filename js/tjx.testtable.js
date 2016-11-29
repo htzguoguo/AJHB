@@ -63,11 +63,11 @@ tjx.testtable = ( function () {
                 tjx.data.safetysearch.getDataTable( arg_map );
             }
         }
-    };
+    }
 
     initTable3 = function (  ) {
         setDataTable( jqueryMap.$table );
-    };
+    }
 
     onDataSuccess = function ( data ) {
         if ( data ) {
@@ -177,11 +177,11 @@ tjx.testtable = ( function () {
                 }
             });*/
         }
-    };
+    }
 
     onFail = function ( data ) {
 
-    };
+    }
 
 //---------------------- END DOM METHODS ---------------------
 //------------------- BEGIN EVENT HANDLERS -------------------

@@ -45,13 +45,13 @@ tjx.data.environmentalsearch = (function () {
     getEnvironmentalData = function ( arg_map ) {
         var url = configMap.get_environmental_url + encodeURIComponent( arg_map.data.name );
         tjx.util.io.getJsonData( url, null, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    };
+    }
 
     getDataTable = function ( arg_map ) {
         var url =  arg_map.url;
         var data = JSON.stringify(arg_map.data);
         tjx.util.io.addJsonData( url, data, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    };
+    }
 
 // Begin public method /configModule/
 // Purpose : Adjust configuration of allowed keys

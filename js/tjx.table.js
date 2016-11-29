@@ -73,23 +73,23 @@ tjx.table = (function () {
 
     getCommandTitle = function (  ) {
         return stateMap.command_title;
-    };
+    }
 
     getCommandDesc = function (  ) {
         return stateMap.command_desc;
-    };
+    }
 
     getCommandPara = function (  ) {
         return stateMap.command_para;
-    };
+    }
 
     getSelectedKey = function (  ) {
         return stateMap.selected_keyvalues;
-    };
+    }
 
     getSelectedValues = function (  ) {
         return stateMap.selected_values;
-    };
+    }
 
    /* <button id="sample_editable_1_new" class="btn green">
         Add New <i class="fa fa-plus"></i>
@@ -126,7 +126,7 @@ tjx.table = (function () {
             jqueryMap.$outsidebtngroup.append( temp );
             jqueryMap.$outsidebtngroup.find( '*[tjx-input-type=newbtn]').on( 'click', onNewBtnClick );
             }
-    };
+    }
 
     configOutsideCommand = function ( data ) {
         stateMap.table_buttons = new Array();
@@ -150,7 +150,7 @@ tjx.table = (function () {
                 }
             });
         }
-       /* stateMap.table_buttons.push(
+        stateMap.table_buttons.push(
             {
                 text: '下载<i class="fa fa-download" style="margin: 3px;"></i>',
                 className : 'btn   blue ',
@@ -159,7 +159,7 @@ tjx.table = (function () {
                     columns: stateMap.exportfield
                 }
             }
-        );*/
+        );
         stateMap.table_buttons.push(
             {
                 /*   text: '<i class="icon-printer">打印</i>',*/
@@ -171,7 +171,7 @@ tjx.table = (function () {
                 }
             }
         );
-    };
+    }
 
     configInsideCommand = function ( keyindex, keyfield ) {
        /* {
@@ -231,7 +231,7 @@ tjx.table = (function () {
           /*  row[keyindex]*/
         });
         return result;
-    };
+    }
 
     buildTableData = function ( fields, data ) {
         var result = new Array();
@@ -239,11 +239,11 @@ tjx.table = (function () {
             var myObj = new Object();
             $.each( row, function ( j, item  ) {
                 myObj[ fields[j].data ] = item;
-            } );
+            } )
             result.push( myObj );
         } );
         return result;
-    };
+    }
 
     configDataTable = function ( data ) {
 
@@ -371,7 +371,7 @@ tjx.table = (function () {
                 cell.innerHTML = i+1;
             } );
         } ).draw();*/
-    };
+    }
 
     configTableDetail = function (  ) {
         if ( ! stateMap.return_value.Detail ) {
@@ -464,7 +464,7 @@ tjx.table = (function () {
                 $(this).addClass("row-details-open").removeClass("row-details-close");
             }
         } );*/
-    };
+    }
 
 
 
@@ -472,7 +472,7 @@ tjx.table = (function () {
         jqueryMap.$table.find('tr').each(function(){ //for each row
             $(this).children('td , th').css('text-align', 'center');  //center the third column.
         });
-    };
+    }
 
 //-------------------- END UTILITY METHODS -------------------
 //--------------------- BEGIN DOM METHODS --------------------
@@ -482,7 +482,7 @@ tjx.table = (function () {
         con.load( stateMap.return_value.Detail, function(responseText,textStatus,XMLHttpRequest){
             callback( con.html()  ).show();
         });
-    };
+    }
 
     setDataTable = function () {
         var arg_map = {
@@ -491,7 +491,7 @@ tjx.table = (function () {
             fail : onFail
         };
         tjx.data.table.getAllTable( arg_map );
-    };
+    }
 
     onSuccess = function ( data ) {
         if ( data ){
@@ -503,11 +503,11 @@ tjx.table = (function () {
 
             tjx.util.ui.stopPageLoading(  );
         }
-    };
+    }
 
     onFail = function ( data ) {
         consolg.log( data );
-    };
+    }
 
 // Begin DOM method /setJqueryMap/
     setJqueryMap = function () {
@@ -530,7 +530,7 @@ tjx.table = (function () {
         jqueryMap.$table.off('click', 'td.tjx-table-details-control');
         jqueryMap.$table.DataTable().clear().destroy();
         setDataTable();
-    };
+    }
 
     onRowBtnClick = function (  )  {
 
@@ -561,7 +561,7 @@ tjx.table = (function () {
         else if ( cur < dd && cur > tt )
         { '<span class=\"label label-sm label-warning\">@(即将超期)</span>'; }
         else { '<span >@(正常)</span>'; }
-    };
+    }
 
     exeCommand = function ( cmds, index ) {
         if ( stateMap.return_value ){
@@ -605,7 +605,7 @@ tjx.table = (function () {
 
             });
         }
-    };
+    }
 
     onNewBtnClick = function ( keyvalue,values, cmdindex ) {
             var index =   $(this).attr(configMap.newbtn_field);
@@ -662,7 +662,7 @@ tjx.table = (function () {
 
                 });
             }*/
-    };
+    }
 
 
 //-------------------- END EVENT HANDLERS --------------------
@@ -688,7 +688,7 @@ tjx.table = (function () {
 
     getModelHeight = function (  ) {
         return stateMap.model_height;
-    };
+    }
 
 // Begin public method /initModule/
 // Purpose : Initializes module

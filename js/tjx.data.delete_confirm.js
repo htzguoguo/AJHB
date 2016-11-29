@@ -45,7 +45,7 @@ tjx.data.delete_confirm = (function () {
     deleteData = function ( arg_map ) {
         var url =  arg_map.data.para + '/' + arg_map.data.key;
         tjx.util.io.deleteJsonData( url, null, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    };
+    }
 
 // Begin public method /configModule/
 // Purpose : Adjust configuration of allowed keys

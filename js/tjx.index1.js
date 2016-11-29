@@ -56,7 +56,7 @@ tjx.index1 = (function () {
         tjx.shell.saveSiteData( 'rolename', stateMap.rolename );
         tjx.shell.saveSiteData( 'username', stateMap.username );
         tjx.shell.saveSiteData( 'engusername', stateMap.engusername );
-    };
+    }
 
    /* linkClick = function (n) {
         var iframe = document.getElementById(configMap.content_id);
@@ -105,7 +105,7 @@ tjx.index1 = (function () {
         jqueryMap.$navbar.empty();
         jqueryMap.$navbar.html(temp_str);
       //  $(temp_str).appendTo("#navBar");
-    };
+    }
 
     initMenu = function ( xmlpath ) {
         if ( ! xmlpath ) {
@@ -146,13 +146,13 @@ tjx.index1 = (function () {
                 stateMap. _span = cop;
                 buildFirstMenu(0, cop, true, true);
             }
-        });
+        })
         //  $("#menu").focus();
         window.scroll(0, 0);
 //    $("html").scrollTop();
 //    $("body").scrollTop();
         //  $(window).scrollTop();
-    };
+    }
 
     linkClick = function ( url, ind ) {
         jqueryMap.$frmright.attr("src", url);
@@ -164,7 +164,7 @@ tjx.index1 = (function () {
             stateMap._selectedIndex = ind;
         }
         // $("#menu").focus();
-    };
+    }
 
     navLeft = function (  ) {
         if ( stateMap._index > 0 ) {
@@ -173,7 +173,7 @@ tjx.index1 = (function () {
             var tail = st + stateMap._span;
             buildFirstMenu(st, tail, false, true);
         }
-    };
+    }
 
     navRight = function (  ) {
         if ( stateMap._index < stateMap._count ) {
@@ -188,7 +188,7 @@ tjx.index1 = (function () {
             }
             buildFirstMenu(st, tail, false, true);
         }
-    };
+    }
 
     buildFirstMenu = function ( start, end, isShowFirst, isShowNav ) {
         var temp_str = new String();
@@ -216,11 +216,11 @@ tjx.index1 = (function () {
         jqueryMap.$menu.append(temp_str);
       /*  $("#menu").empty();
         $(temp_str).appendTo("#menu");*/
-    };
+    }
 
     fail = function  ( result ) {
 
-    };
+    }
 
 //-------------------- END UTILITY METHODS -------------------
 //--------------------- BEGIN DOM METHODS --------------------
@@ -257,7 +257,7 @@ tjx.index1 = (function () {
         linkClick('wwm/onemappage/index.html' ,i );
        /* jqueryMap.$menu.find('li[class='+ name +  ']').mousedown();*/
 
-    };
+    }
 
     configModule = function ( input_map ) {
         spa.butil.setConfigMap({
@@ -272,7 +272,7 @@ tjx.index1 = (function () {
         $(window).unbind('resize');
         inittopmenu();
         $(window).bind('resize',rebuildMenu);
-    };
+    }
 
 // End public method /configModule/
 // Begin public method /initModule/

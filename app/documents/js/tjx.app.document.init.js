@@ -5,19 +5,17 @@
 
 
 require( [
-  /*  '../../js/jq/jquery.min.js',
+    '../../js/jq/jquery.min.js',
     '../../css/glb/bootstrap/js/bootstrap.min.js',
     '../../css/glb/bootstrap-modal/js/bootstrap-modalmanager.js',
     '../../css/glb/bootstrap-modal/js/bootstrap-modal.js',
     '../../css/glb/datatables/media/js/jquery.dataTables.min.js',
- /!*   '../../css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.min.js',*!/
+ /*   '../../css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.min.js',*/
     '../../js/jq/jquery.cookie.js',
     '../../js/jq/jquery.blockui.min.js',
-    '../../js/jq/jquery.slimscroll.min.js',*/
-    '../../js/tjx.lib.min.js',
-    '../../js/tjx.build.min.js',
+    '../../js/jq/jquery.slimscroll.min.js',
     '../../css/glb/jstree/dist/jstree.min.js',
-   /* '../../js/jq/jquery.event.gevent.js',
+    '../../js/jq/jquery.event.gevent.js',
     '../../js/jq/jquery.event.ue.js',
     '../../js/tjx.js',
     '../../js/tjx.core.js',
@@ -25,7 +23,7 @@ require( [
     '../../js/tjx.util.js',
     '../../js/tjx.util.io.js',
     '../../js/tjx.util.ui.js',
-    '../../js/tjx.util.ui.table.js',*/
+    '../../js/tjx.util.ui.table.js',
     'js/tjx.data.documents.js',
     'js/tjx.app.documents.index.js',
     'js/tjx.app.documents.list.js'

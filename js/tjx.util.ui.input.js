@@ -71,7 +71,7 @@ tjx.util.ui.input = (function () {
             .on("cut copy paste",function(e){
                 e.preventDefault();
             });
-    };
+    }
 
     getFixedFloat = function ( value, fixedNumber ) {
         var result = '';
@@ -80,7 +80,7 @@ tjx.util.ui.input = (function () {
             result = num.toFixed( fixedNumber );
         }
         return result;
-    };
+    }
 
     getFixedFloat1  = function ( value, fixedNumber ) {
         var result = 0;
@@ -89,7 +89,7 @@ tjx.util.ui.input = (function () {
             result = num.toFixed( fixedNumber );
         }
         return result;
-    };
+    }
 
 // Begin public method /initModule/
 // Purpose : Initializes module

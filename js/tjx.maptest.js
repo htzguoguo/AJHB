@@ -28,7 +28,7 @@ tjx.maptest = ( function () {
 
             }
         );
-    };
+    }
 
     return {
         initModule : initModule

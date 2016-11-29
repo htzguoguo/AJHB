@@ -49,7 +49,7 @@ tjx.data.index1 = (function () {
     getMenu = function ( arg_map ) {
       /*  var url = configMap.rest_server_url + arg_map.data;*/
         tjx.util.io.getJsonData( configMap.rest_server_url, null, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    };
+    }
 
 // Begin public method /configModule/
 // Purpose : Adjust configuration of allowed keys

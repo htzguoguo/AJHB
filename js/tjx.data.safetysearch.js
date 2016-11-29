@@ -51,28 +51,28 @@ tjx.data.safetysearch = (function () {
     getChemicalData = function ( arg_map ) {
         var data = JSON.stringify(arg_map.data);
         tjx.util.io.getJsonData( configMap.get_chemical_url, data, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    };
+    }
 
     getEnterpriseData = function ( arg_map ) {
         var url = configMap.get_enterprise_url + encodeURIComponent( arg_map.data.name );
         tjx.util.io.getJsonData( url, null, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    };
+    }
 
     getEnterpriseDataByKey = function ( arg_map ) {
         var url = configMap.get_enterprise_key_url + encodeURIComponent( arg_map.data.key );
         tjx.util.io.getJsonData( url, null, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    };
+    }
 
     getDataTable = function ( arg_map ) {
         var url =  arg_map.url;
         var data = JSON.stringify(arg_map.data);
         tjx.util.io.addJsonData( url, data, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    };
+    }
 
     getDataElement = function ( arg_map ) {
         var url =  arg_map.url;
         tjx.util.io.getJsonData( url, null, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    };
+    }
 
 // Begin public method /configModule/
 // Purpose : Adjust configuration of allowed keys

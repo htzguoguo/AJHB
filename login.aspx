@@ -12,12 +12,8 @@
 <!-- third-party javascript -->
 <script src="js/jq/jquery.min.js" type="text/javascript"></script>
 <!-- our javascript -->
-<!--<script type="text/javascript" src="js/tjx.js"></script>
-<script type="text/javascript" src="js/tjx.login.js"></script>-->
-
-<script type="text/javascript" src="js/tjx.build.min.js"></script>
-
-
+<script type="text/javascript" src="js/tjx.js"></script>
+<script type="text/javascript" src="js/tjx.login.js"></script>
  <script type="text/javascript">
 
      // Start spa once DOM is ready

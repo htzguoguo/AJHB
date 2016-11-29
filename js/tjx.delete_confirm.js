@@ -69,12 +69,12 @@ tjx.delete_confirm = (function () {
             tjx.data.delete_confirm.deleteData( arg_map );
 
 
-    };
+    }
 
     onCancelData = function ( event ) {
         var val =   jqueryMap.$form.validate();
         //  console.log('validate', val.validate());
-    };
+    }
 
     onSuccess = function ( data  ) {
         if ( data.IsSuccess ){
@@ -85,11 +85,11 @@ tjx.delete_confirm = (function () {
         }else{
             tjx.util.ui.showAlert( '系统提示' , data.Desc);
         }
-    };
+    }
 
     onFail = function ( data ) {
 
-    };
+    }
 //-------------------- END EVENT HANDLERS --------------------
 //------------------- BEGIN PUBLIC METHODS -------------------
 // Begin public method /configModule/

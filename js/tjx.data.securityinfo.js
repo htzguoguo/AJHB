@@ -51,23 +51,23 @@ tjx.data.securityinfo = (function () {
     addSecurityInfo = function ( arg_map ) {
         var data = JSON.stringify(arg_map.data);
         tjx.util.io.addJsonData( configMap.add_url, data, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    };
+    }
 
     getSecurityInfo = function ( arg_map ) {
         var url = configMap.get_url + arg_map.data.key;
         tjx.util.io.getJsonData( url, null, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    };
+    }
 
     getSecurityEditInfo= function ( arg_map ) {
         var url = configMap.get_edit_url + arg_map.data.key;
         tjx.util.io.getJsonData( url, null, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    };
+    }
 
     updateSecurityInfo = function ( arg_map ) {
         var url = configMap.update_url + arg_map.key;
         var data = JSON.stringify(arg_map.data);
         tjx.util.io.updateJsonData( url, data, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    };
+    }
 
 // Begin public method /configModule/
 // Purpose : Adjust configuration of allowed keys
