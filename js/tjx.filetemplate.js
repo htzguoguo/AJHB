@@ -89,7 +89,7 @@ tjx.filetemplate = (function () {
          $(this).fileupload('option', 'done')
          .call(this, $.Event('done'), {result: result});
          });*/
-    }
+    };
 
 // End DOM method /setJqueryMap/
 //---------------------- END DOM METHODS ---------------------
@@ -108,12 +108,12 @@ tjx.filetemplate = (function () {
             // filename = "blahblah.jpg", without path
         });*/
         return  names.join( '|' );
-    }
+    };
 
     resetFiles = function (  )  {
        /* $('input:file').MultiFile('reset');*/
         jqueryMap.$filebody.empty();
-    }
+    };
 
 // Begin public method /configModule/
 // Purpose : Adjust configuration of allowed keys

@@ -52,7 +52,7 @@ tjx.util.ui.template = (function () {
         $tbody.attr('tjx-page-index', ++ind) ;
 
         setTableWithData( $tbody, data );
-    }
+    };
 
     onPageUp = function (  ) {
         var $tbody = $(this).parent().parent().find( 'tbody' );
@@ -63,7 +63,7 @@ tjx.util.ui.template = (function () {
             $tbody.attr('tjx-page-index', --ind) ;
             setTableWithData( $tbody, data );
         }
-    }
+    };
 
     setTableWithData = function ( $tbody, data ) {
         var num =   $tbody.parent().parent().parent().next().children().eq(1);
@@ -128,7 +128,7 @@ tjx.util.ui.template = (function () {
 
         }
         tjx.util.ui.table.initPopup();
-    }
+    };
 
 // Begin public method /configModule/
 // Purpose : Adjust configuration of allowed keys

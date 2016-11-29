@@ -12,47 +12,47 @@
         "type" : "pp",
         "icon": "icon-camcorder",
         "isActive": false,
-        "deviceid": "1000171$1$0$97",
+        "deviceid": "1000333$1$0$98",
         "links": [
           {
-            "name": "厂区",
+            "name": "厂区门口",
             "url": "PPG航空材料（天津）有限公司",
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000171$1$0$98"
+            "deviceid": "1000333$1$0$97"
           },
           {
-            "name": "危化品仓库一",
+            "name": "库房通道",
             "url": "PPG航空材料（天津）有限公司",
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000171$1$0$99"
+            "deviceid": "1000333$1$0$99"
           },
           {
-            "name": "危化品仓库二",
+            "name": "车间2",
             "url": "PPG航空材料（天津）有限公司",
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000171$1$0$100"
+            "deviceid": "1000333$1$0$100"
           },
           {
-            "name": "材料仓库",
+            "name": "小仓库",
             "url": "PPG航空材料（天津）有限公司",
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000171$1$0$101"
+            "deviceid": "1000333$1$0$101"
           } ,
           {
-            "name": "值班室",
+            "name": "保安室",
             "url": "PPG航空材料（天津）有限公司",
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000171$1$0$102"
+            "deviceid": "1000333$1$0$102"
           }
         ]
       },
@@ -162,7 +162,7 @@
         "type" : "pp",
         "icon": "icon-camcorder",
         "isActive": false,
-        "deviceid": "1000171$1$0$343",
+        "deviceid": "1000333$1$0$342",
         "links": [
           {
             "name": "危品库2",
@@ -170,7 +170,7 @@
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000171$1$0$343"
+            "deviceid": "1000333$1$0$343"
           },
           {
             "name": "北侧停车场",
@@ -178,7 +178,7 @@
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000171$1$0$344"
+            "deviceid": "1000333$1$0$344"
           },
           {
             "name": "正门口岗亭",
@@ -186,7 +186,7 @@
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000171$1$0$345"
+            "deviceid": "1000333$1$0$345"
           },
           {
             "name": "值班室",
@@ -194,7 +194,7 @@
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000171$1$0$346"
+            "deviceid": "1000333$1$0$346"
           }
 
         ]
@@ -205,7 +205,7 @@
         "type" : "pp",
         "icon": "icon-camcorder",
         "isActive": false,
-        "deviceid": "1000326$1$0$11",
+        "deviceid": "1000333$1$0$382",
         "links": [
           {
             "name": "出入口",
@@ -213,7 +213,7 @@
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000326$1$0$8"
+            "deviceid": "1000333$1$0$379"
           },
           {
             "name": "氨气罐",
@@ -221,7 +221,7 @@
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000326$1$0$9"
+            "deviceid": "1000333$1$0$380"
           },
           {
             "name": "制冷车间",
@@ -229,7 +229,7 @@
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000326$1$0$10"
+            "deviceid": "1000333$1$0$381"
           },
           {
             "name": "值班室",
@@ -237,7 +237,7 @@
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000326$1$0$12"
+            "deviceid": "1000333$1$0$383"
           }
 
         ]
@@ -248,7 +248,7 @@
         "type" : "pp",
         "icon": "icon-camcorder",
         "isActive": false,
-        "deviceid": "1000171$1$0$103",
+        "deviceid": "1000333$1$0$103",
         "links": [
           {
             "name": "加油站全景",
@@ -256,23 +256,7 @@
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000171$1$0$103"
-          },
-          {
-            "name": "加油区",
-            "url": "天津港保税区振华加油站",
-            "type" : "pp",
-            "icon": "icon-camcorder",
-            "isActive": false,
-            "deviceid": "1000171$1$0$104"
-          },
-          {
-            "name": "加油站进口",
-            "url": "天津港保税区振华加油站",
-            "type" : "pp",
-            "icon": "icon-camcorder",
-            "isActive": false,
-            "deviceid": "1000171$1$0$105"
+            "deviceid": "1000333$1$0$103"
           },
           {
             "name": "加油站灌区",
@@ -280,7 +264,23 @@
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000171$1$0$106"
+            "deviceid": "1000333$1$0$106"
+          },
+          {
+            "name": "加油站进口",
+            "url": "天津港保税区振华加油站",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$105"
+          },
+          {
+            "name": "加油区",
+            "url": "天津港保税区振华加油站",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$104"
           }
         ]
       },
@@ -324,7 +324,7 @@
         "type" : "pp",
         "icon": "icon-camcorder",
         "isActive": false,
-        "deviceid": "1000171$1$0$107",
+        "deviceid": "1000333$1$0$107",
         "links": [
           {
             "name": "危险源点",
@@ -332,7 +332,7 @@
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000171$1$0$107"
+            "deviceid": "1000333$1$0$107"
           },
           {
             "name": "出入口",
@@ -340,7 +340,7 @@
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000171$1$0$108"
+            "deviceid": "1000333$1$0$108"
           },
           {
             "name": "危险源点",
@@ -348,7 +348,7 @@
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000171$1$0$109"
+            "deviceid": "1000333$1$0$109"
           },
           {
             "name": "重点部位",
@@ -356,7 +356,7 @@
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
-            "deviceid": "1000171$1$0$110"
+            "deviceid": "1000333$1$0$110"
           }
         ]
       },

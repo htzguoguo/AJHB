@@ -52,32 +52,32 @@ tjx.data.chemical = (function () {
     addChemicalInfo = function ( arg_map ) {
         var data = JSON.stringify(arg_map.data);
         tjx.util.io.addJsonData( configMap.add_url, data, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    }
+    };
 
     getChemicalCategoryData = function ( callback ) {
         $.getJSON( configMap.chemical_url, null, callback);
-    }
+    };
 
     getChemicalNameCas = function ( callback ) {
         $.getJSON( configMap.chemical_name_cas_url, null, callback);
-    }
+    };
 
     getChemicalInfo = function ( arg_map ) {
         var url = configMap.get_url + arg_map.data.key;
         tjx.util.io.getJsonData( url, null, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    }
+    };
 
     updateChemicalInfo = function ( arg_map ) {
         var url = configMap.get_url + arg_map.key;
         var data = JSON.stringify(arg_map.data);
         tjx.util.io.updateJsonData( url, data, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    }
+    };
 
     getChemicalData  = function ( arg_map ) {
-        var url = configMap.get_chemical_url + arg_map.datetype + '/' + arg_map.grouptype
+        var url = configMap.get_chemical_url + arg_map.datetype + '/' + arg_map.grouptype;
         var data = JSON.stringify(arg_map.data);
         tjx.util.io.addJsonData( url, data, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    }
+    };
 
 // Begin public method /configModule/
 // Purpose : Adjust configuration of allowed keys

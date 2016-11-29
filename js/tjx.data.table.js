@@ -45,9 +45,9 @@ tjx.data.table = (function () {
 
     getAllTable = function ( arg_map ) {
         var data = JSON.stringify(arg_map.data);
-        var url = configMap.get_all_url + stateMap.guid;
+        var url = configMap.get_all_url + tjx.index3.getGUID();
         tjx.util.io.getJsonData( url, data, arg_map.beforeSend, arg_map.complete, arg_map.success, arg_map.fail );
-    }
+    };
 
 // Begin public method /configModule/
 // Purpose : Adjust configuration of allowed keys

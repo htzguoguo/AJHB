@@ -101,7 +101,7 @@ tjx.util.ui.photo = (function () {
                 }
             });
 
-    }
+    };
 
 // Begin public method /initModule/
 // Purpose : Initializes module

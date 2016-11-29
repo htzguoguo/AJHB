@@ -85,7 +85,7 @@ tjx.util.io = (function () {
             success : success,
             fail : fail
         });
-    }
+    };
 
     updateJsonData = function ( url, data, beforeSend, complete, success, fail  ){
         $.ajax({
@@ -100,7 +100,7 @@ tjx.util.io = (function () {
             success : success,
             fail : fail
         });
-    }
+    };
 
     addJsonData = function ( url, data, beforeSend, complete, success, fail  ){
         $.ajax({
@@ -120,7 +120,7 @@ tjx.util.io = (function () {
             success : success,
             fail : fail
         });
-    }
+    };
 
 
     getJsonData = function ( url, data, beforeSend, complete, success, fail  ){
@@ -136,7 +136,7 @@ tjx.util.io = (function () {
                     success : success,
                     fail : fail
             });
-            }
+            };
 
     getJsonpData  = function ( url, data, beforeSend, complete, success, fail  ){
         $.ajax({
@@ -148,7 +148,7 @@ tjx.util.io = (function () {
             jsonpCallback:"?",
             success : success
         });
-    }
+    };
 
     uploadBlobOrFile = function ( url, data, progress, complete, success, fail, callbackpara ) {
         var xhr = new XMLHttpRequest();
@@ -180,15 +180,15 @@ tjx.util.io = (function () {
             }
         };
         xhr.send(data);
-    }
+    };
 
     onFail = function (  ) {
 
-    }
+    };
 
     getJsonFile = function ( path, callback ) {
         $.getJSON(path, callback);
-    }
+    };
 
 // Begin public method /initModule/
 // Purpose : Initializes module

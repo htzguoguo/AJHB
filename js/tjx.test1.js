@@ -63,7 +63,7 @@ tjx.test1 = ( function () {
         jqueryMap.$navbar.empty();
         jqueryMap.$navbar.html(temp_str);
         //  $(temp_str).appendTo("#navBar");
-    }
+    };
 
 
     initMenu = function ( xmlpath ) {
@@ -111,13 +111,13 @@ tjx.test1 = ( function () {
                 buildFirstMenu(0, cop, true, true);
             }
         }
-        )
+        );
         //  $("#menu").focus();
         window.scroll(0, 0);
 //    $("html").scrollTop();
 //    $("body").scrollTop();
         //  $(window).scrollTop();
-    }
+    };
 
     linkClick = function ( url, ind ) {
         // jqueryMap.$frmright.attr("src", url);
@@ -129,7 +129,7 @@ tjx.test1 = ( function () {
             stateMap._selectedIndex = ind;
         }
         // $("#menu").focus();
-    }
+    };
 
     navLeft = function (  ) {
         if ( stateMap._index > 0 ) {
@@ -138,7 +138,7 @@ tjx.test1 = ( function () {
             var tail = st + stateMap._span;
             buildFirstMenu(st, tail, false, true);
         }
-    }
+    };
 
     navRight = function (  ) {
         if ( stateMap._index < stateMap._count ) {
@@ -153,7 +153,7 @@ tjx.test1 = ( function () {
             }
             buildFirstMenu(st, tail, false, true);
         }
-    }
+    };
 
     buildFirstMenu = function ( start, end, isShowFirst, isShowNav ) {
         var temp_str = new String();
@@ -179,11 +179,11 @@ tjx.test1 = ( function () {
         }
         jqueryMap.$menu.empty();
         jqueryMap.$menu.append(temp_str);
-    }
+    };
 
     fail = function  ( result ) {
 
-    }
+    };
 
 //-------------------- END UTILITY METHODS -------------------
 //--------------------- BEGIN DOM METHODS --------------------
