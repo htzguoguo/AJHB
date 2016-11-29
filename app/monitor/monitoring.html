@@ -10,9 +10,9 @@
     <link href="../../css/glb/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
 
     <!-- third-party stylesheets -->
-    <link rel="stylesheet" href="http://60.29.110.104/arcgis_js_api/library/3.9/3.9/js/dojo/dijit/themes/claro/claro.css" />
+   <!-- <link rel="stylesheet" href="http://60.29.110.104/arcgis_js_api/library/3.9/3.9/js/dojo/dijit/themes/claro/claro.css" />
     <link rel="stylesheet" href="http://60.29.110.104/arcgis_js_api/library/3.9/3.9/js/dojo/dojox/layout/resources/FloatingPane.css" />
-    <link rel="stylesheet" href="http://60.29.110.104/arcgis_js_api/library/3.9/3.9/js/esri/css/esri.css" />
+    <link rel="stylesheet" href="http://60.29.110.104/arcgis_js_api/library/3.9/3.9/js/esri/css/esri.css" />-->
 
     <link href="../../css/glb/fancybox/source/jquery.fancybox.css" rel="stylesheet" type="text/css"/>
     <link href="../../css/portfolio.css" rel="stylesheet" type="text/css"/>
@@ -39,6 +39,10 @@
             background-color:#F4F4F4;
             border-color:#F4F4F4;
         }
+         .col-md-12,  .col-md-3, .col-md-9 {
+            padding-left: 0px;
+            padding-right:20px;
+        }
     </style>
 
 </head>
@@ -54,7 +58,11 @@
     </div> <!-- /.side-menu -->
     <div  id="mapcontainer" class="tjx-map baidu-maps" >
           <div class="row" style="margin-top: 10px;margin-left: 10px;">
-              <div class="col-md-8">
+
+
+              <!--<div class="col-md-3" style="background: cornflowerblue; width: 100%; height: 70px;"></div>-->
+
+              <div class="col-md-9"style="padding-bottom: 10px;padding-top: 20px;">
                   <table class="table mtable" >
                       <tbody>
                       <tr>
@@ -68,14 +76,13 @@
                   </table>
               </div>
 
+              <div class="col-md-3 alert alert-block alert-info  fade in" >
+                  <div id="info" class="col-md-12 control-label"style="padding-top: 10px;"></div>
 
-              <div class="col-md-12 alert alert-block alert-info  fade in" >
-                  <div id="info" class="col-md-2 control-label">
+                  <hr class="col-md-10">
 
-                  </div>
-
-                  <div class="col-md-1 control-label ">开始时间</div>
-                  <div class="col-md-2">
+                  <div class="col-md-12 control-label " style="padding-bottom: 10px;">开始时间</div>
+                  <div class="col-md-12"style="padding-bottom: 10px;padding-top: 10px;">
                       <div class="input-group date form_datetime ">
                           <input id="startdate" type="text" size="16" readonly class="form-control">
 															<span class="input-group-btn">
@@ -90,8 +97,8 @@
                       </div>-->
                   </div>
 
-                  <div class="col-md-1 control-label ">结束时间</div>
-                  <div class="col-md-2">
+                  <div class="col-md-12 control-label "style="padding-bottom: 10px;padding-top: 10px;">结束时间</div>
+                  <div class="col-md-12"style="padding-bottom: 10px;padding-top: 10px;">
                       <div class="input-group date form_datetime ">
                           <input id="enddate" type="text" size="16" readonly class="form-control">
 															<span class="input-group-btn">
@@ -105,14 +112,97 @@
                                             </span>
                        </div>-->
                   </div>
-                  <div class="col-md-4">
-                      <button id="btnplayback" class="btn blue btn-sm  ">回放</button>
 
-                      <button  id="btnplaypause"   class="btn blue btn-sm  " title="暂停"><i class="fa fa-pause"></i></button>
-                      <button  id="btnplayresume"  class="btn blue btn-sm  " title="继续"> <i class="fa fa-play"></i></button>
-                      <button id="btnplayscreenshot"  class="btn blue btn-sm  " title="截图"> <i class="fa fa-clipboard"></i></button>
+                  <hr class="col-md-10">
+
+                  <div class="col-md-12 control-label "style="padding-bottom: 10px;">回放</div>
+                  <div class="col-md-12"style="padding-bottom: 10px;padding-top: 10px;">
+                      <button id="btnplayback" class="btn blue btn-sm"title="回放">回放</button>
+                      <button  id="btnplaypause"   class="btn blue btn-sm  " title="暂停">暂停</button>
+                      <button  id="btnplayresume"  class="btn blue btn-sm  " title="继续">播放</button>
+                      <button id="btnplayscreenshot"  class="btn blue btn-sm  " title="截图">截图</button>
                   </div>
+                  <!--<div class="col-md-12"style="padding-bottom: 10px;">-->
+                      <!--<button  id="btnplaydownload"  class="btn blue btn-sm  " title="下载">下载</button>-->
+                      <!--<button  id="btnplayrefresh"  class="btn blue btn-sm  " title="刷新">刷新</button>-->
+                      <!--<button  id="btnplayalarm"  class="btn blue btn-sm  " title="警报">警报</button>-->
+                      <!--<button  id="btnplayclose"  class="btn blue btn-sm  " title="关闭">关闭</button>-->
+                  <!--</div>-->
+                  <!--<div class="col-md-12"style="padding-bottom: 10px;">-->
+                      <!--<button  id="btnplayvolume-off"  class="btn blue btn-sm  " title="静音">静音</button>-->
+                      <!--<button  id="btnplayvolume-up"  class="btn blue btn-sm  " title="增大音量">增大音量</button>-->
+                      <!--<button  id="btnplayvolume-down"  class="btn blue btn-sm  " title="减小音量">减小音量</button>-->
+                  <!--</div>-->
+
+                  <hr class="col-md-10">
+
+                  <div class="col-md-12 control-label "style="padding-bottom: 10px;">下载</div>
+                  <div class="col-md-12"style="padding-bottom: 10px;padding-top: 10px;">
+                      <button id="btndownload" class="btn blue btn-sm"title="下载">下载</button>
+                      <button  id="btndownloadpause"   class="btn blue btn-sm  " title="暂停">暂停</button>
+                      <button  id="btndownloadresume"  class="btn blue btn-sm  " title="继续">继续</button>
+                      <button id="btndownloadstop"  class="btn blue btn-sm  " title="停止">停止</button>
+                  </div>
+                <!--  <div class="col-md-12"style="padding-bottom: 10px;">
+                      <button  id="btnplayrate1"  class="btn blue btn-sm  " title="1倍">1X</button>
+                      <button  id="btnplayrate2"  class="btn blue btn-sm  " title="2倍">2X</button>
+                      <button  id="btnplayrate3"  class="btn blue btn-sm  " title="3倍">3X</button>
+                      <button  id="btnplayrate4"  class="btn blue btn-sm  " title="4倍">4X</button>
+                      <button  id="btnplayrate5"  class="btn blue btn-sm  " title="5倍">5X</button>
+                  </div>
+                  <div class="col-md-12"style="padding-bottom: 10px;">
+                      <button  id="btnplayrate11"  class="btn blue btn-sm  " title="1倍">1 -</button>
+                      <button  id="btnplayrate22"  class="btn blue btn-sm  " title="2倍">2 -</button>
+                      <button  id="btnplayrate33"  class="btn blue btn-sm  " title="3倍">3-</button>
+                      <button  id="btnplayrate44"  class="btn blue btn-sm  " title="4倍">4 -</button>
+                      <button  id="btnplayrate55"  class="btn blue btn-sm  " title="5倍">5 -</button>
+                  </div>-->
+
               </div>
+              <!--<div class="col-md-12 alert alert-block alert-info  fade in" >-->
+                  <!--<div id="info" class="col-md-2 control-label">-->
+
+                  <!--</div>-->
+
+                  <!--<div class="col-md-1 control-label ">开始时间</div>-->
+                  <!--<div class="col-md-2">-->
+                      <!--<div class="input-group date form_datetime ">-->
+                          <!--<input id="startdate" type="text" size="16" readonly class="form-control">-->
+															<!--<span class="input-group-btn">-->
+															<!--<button class="btn default date-set" type="button"><i class="fa fa-calendar"></i></button>-->
+															<!--</span>-->
+                      <!--</div>-->
+                      <!--&lt;!&ndash;<div class="input-group  date form_datetime"  data-date-format="yyyy-mm-dd" data-date-viewmode="years" data-date-minviewmode="days">-->
+                          <!--<input id="startdate" type="text" name="ExpirationDate"  tjx-data-field="ExpirationDate" class="form-control " >-->
+                                           <!--<span class="input-group-btn">-->
+                                           <!--<button class="btn default" type="button"><i class="fa fa-calendar"></i></button>-->
+                                           <!--</span>-->
+                      <!--</div>&ndash;&gt;-->
+                  <!--</div>-->
+
+                  <!--<div class="col-md-1 control-label ">结束时间</div>-->
+                  <!--<div class="col-md-2">-->
+                      <!--<div class="input-group date form_datetime ">-->
+                          <!--<input id="enddate" type="text" size="16" readonly class="form-control">-->
+															<!--<span class="input-group-btn">-->
+															<!--<button class="btn default date-set" type="button"><i class="fa fa-calendar"></i></button>-->
+															<!--</span>-->
+                      <!--</div>-->
+                      <!--&lt;!&ndash; <div class="input-group  date form_datetime"  data-date-format="yyyy-mm-dd" data-date-viewmode="years" data-date-minviewmode="days">-->
+                           <!--<input id="enddate" type="text" name="ExpirationDate"  tjx-data-field="ExpirationDate" class="form-control " >-->
+                                            <!--<span class="input-group-btn">-->
+                                            <!--<button class="btn default" type="button"><i class="fa fa-calendar"></i></button>-->
+                                            <!--</span>-->
+                       <!--</div>&ndash;&gt;-->
+                  <!--</div>-->
+                  <!--<div class="col-md-4">-->
+                      <!--<button id="btnplayback" class="btn blue btn-sm  ">回放</button>-->
+
+                      <!--<button  id="btnplaypause"   class="btn blue btn-sm  " title="暂停"><i class="fa fa-pause"></i></button>-->
+                      <!--<button  id="btnplayresume"  class="btn blue btn-sm  " title="继续"> <i class="fa fa-play"></i></button>-->
+                      <!--<button id="btnplayscreenshot"  class="btn blue btn-sm  " title="截图"> <i class="fa fa-clipboard"></i></button>-->
+                  <!--</div>-->
+              <!--</div>-->
 
 
 
