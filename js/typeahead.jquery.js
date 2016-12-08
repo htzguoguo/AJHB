@@ -668,7 +668,7 @@
             this.highlight = !!o.highlight;
             this.name = o.name || nameGenerator();
 
-            console.log( 'this.limit', o, www );
+           
 
             this.limit = o.limit || 5;
 

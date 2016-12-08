@@ -39,7 +39,8 @@ tjx.app.monitor.monitoring = (function () {
         initSidebarNav,
         initSidebarScroll,
         isSidebarCollapsed,
-        onPalyBack
+        onPalyBack,
+        onDownloadVideo
         ;
 //----------------- END MODULE SCOPE VARIABLES ---------------
 //------------------- BEGIN UTILITY METHODS ------------------
@@ -238,7 +239,8 @@ tjx.app.monitor.monitoring = (function () {
             $btn_playback : $container.find( '#btnplayback' ),
             $btn_playpause : $container.find( '#btnplaypause' ),
             $btn_playresume : $container.find( '#btnplayresume' ),
-            $btn_playscreenshot : $container.find( '#btnplayscreenshot' )
+            $btn_playscreenshot : $container.find( '#btnplayscreenshot' ),
+            $btn_downloadvideo : $container.find( '#btndownload' )
         };
     };
 // End DOM method /setJqueryMap/
@@ -253,8 +255,16 @@ tjx.app.monitor.monitoring = (function () {
             starttime : start,
             endtime : eee
         } );
-    }
+    };
 
+    onDownloadVideo = function () {
+        var start = jqueryMap.$sdate.val(),
+            eee = jqueryMap.$edate.val();
+        tjx.app.monitor.camera.goDownloadVideo( {
+            starttime : start,
+            endtime : eee
+        } );
+    };
 
 //-------------------- END EVENT HANDLERS --------------------
 //------------------- BEGIN PUBLIC METHODS -------------------
@@ -290,6 +300,7 @@ tjx.app.monitor.monitoring = (function () {
         jqueryMap.$btn_playpause.on( 'click', tjx.app.monitor.camera.goPlayPause );
         jqueryMap.$btn_playresume.on( 'click', tjx.app.monitor.camera.goPlayResume );
         jqueryMap.$btn_playscreenshot.on( 'click', tjx.app.monitor.camera.goPlayScreenShot);
+        jqueryMap.$btn_downloadvideo.on( 'click', onDownloadVideo );
 
         return true;
     };

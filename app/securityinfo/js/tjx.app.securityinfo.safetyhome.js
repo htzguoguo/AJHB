@@ -247,13 +247,13 @@ tjx.app.securityinfo.safetyhome = (function () {
 // example: onClickButton = ...
     setDataTable = function () {
         var search = {
-            Fields : [ 'EnterpriseName', 'ChemicalsCount', 'CertificationCount',
-                'SafetyEquipmentCount', 'SpecialEquipmentCount', 'HazardIdentificationCount',
-                'SafetyInspectionCount', 'sum'
+            Fields : [ 'EnterpriseName', 'DangerousChemicalsScore', 'PractitionerCertificationScore',
+                'SafetyEquipmentScore', 'SpecialEquipmentScore', 'HazardIdentificationScore',
+                'SafetyInspectionRecordsScore', 'TotalScore'
             ],
             Search : '1 = {0}',
             Values : [ '1' ],
-            OrderFieldName : 'sum',
+            OrderFieldName : 'TotalScore',
             OrderType : 'desc',
             TopCount : 5
         };

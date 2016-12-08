@@ -36,6 +36,7 @@ tjx.data.rating.enterpriserating = (function () {
         getSpecial,
         getInspect
         ;
+  
 //----------------- END MODULE SCOPE VARIABLES ---------------
 //------------------- BEGIN UTILITY METHODS ------------------
 // example : getTrimmedString

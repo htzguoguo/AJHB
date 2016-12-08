@@ -35,8 +35,10 @@ tjx.util.io = (function () {
         uploadBlobOrFile,
         onFail,
         getJsonFile,
-        getJsonpData
+        getJsonpData,
+        onError
         ;
+    jQuery.support.cors = true;
 //----------------- END MODULE SCOPE VARIABLES ---------------
 //------------------- BEGIN UTILITY METHODS ------------------
 // example : getTrimmedString
@@ -51,6 +53,9 @@ tjx.util.io = (function () {
 //---------------------- END DOM METHODS ---------------------
 //------------------- BEGIN EVENT HANDLERS -------------------
 // example: onClickButton = ...
+    onError = function ( XMLHttpRequest, txtStatus, errorThrown ) {
+      /*  alert( 'error' +  txtStatus + errorThrown );*/
+    };
 //-------------------- END EVENT HANDLERS --------------------
 //------------------- BEGIN PUBLIC METHODS -------------------
 // Begin public method /configModule/
@@ -118,7 +123,8 @@ tjx.util.io = (function () {
             beforeSend : beforeSend,
             complete : complete,
             success : success,
-            fail : fail
+            fail : fail,
+            error : onError
         });
     };
 

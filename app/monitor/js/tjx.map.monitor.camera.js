@@ -6,7 +6,7 @@ tjx.app.monitor.camera= (function () {
     var
         configMap = {
             camera_setting : {
-                wnd_num : 6
+                wnd_num : 4
             }
         },
         stateMap = {
@@ -30,7 +30,8 @@ tjx.app.monitor.camera= (function () {
         goPlaybackByHWND,
         goPlayPause,
         goPlayResume,
-        goPlayScreenShot
+        goPlayScreenShot,
+        goDownloadVideo
         ;
 //----------------- END MODULE SCOPE VARIABLES ---------------
 //------------------- BEGIN UTILITY METHODS ------------------
@@ -77,7 +78,7 @@ tjx.app.monitor.camera= (function () {
         var date = eval('new Date(' + strDate.replace(/\d+(?=-[^-]+$)/,
                 function (a) { return parseInt(a, 10) - 1; }).match(/\d+/g) + ')');
         return date;
-    }
+    };
 
     goPlayback = function ( arg_map ) {
         var obj = document.getElementById("DPSDK_OCX");
@@ -90,19 +91,19 @@ tjx.app.monitor.camera= (function () {
         var nEndTime = getDate(strEndTime).getTime()/1000;
         var	nRet = obj.DPSDK_StartTimePlaybackByWndNo(stateMap.gWndId, nWndNo, szCameraId, nRecordSource, nStartTime, nEndTime);
         ShowCallRetInfo(nRet, "视频");
-    }
+    };
 
     goPlayPause = function (  ) {
         var obj = document.getElementById("DPSDK_OCX");
         var nWndNo = obj.DPSDK_GetSelWnd(stateMap.gWndId);
         ShowCallRetInfo(obj.DPSDK_PausePlaybackByWndNo(stateMap.gWndId, nWndNo), "暂停回放");
-    }
+    };
 
     goPlayResume = function () {
         var obj = document.getElementById("DPSDK_OCX");
         var nWndNo = obj.DPSDK_GetSelWnd(stateMap.gWndId);
         ShowCallRetInfo(obj.DPSDK_ResumePlaybackByWndNo(stateMap.gWndId, nWndNo), "继续回放");
-    }
+    };
 
     goPlayScreenShot = function () {
         var obj = document.getElementById("DPSDK_OCX");
@@ -112,7 +113,7 @@ tjx.app.monitor.camera= (function () {
         var path="c:\\ajhb_cctv\\"+mydate.toLocaleString().replace(" ","").replace("年","").replace("月","").replace("日","").replace(reg,"")+".bmp";
         alert("存储路径："+path);
         ShowCallRetInfo(obj.DPSDK_CapturePictureByWndNo(stateMap.gWndId, nWndNo,path), "抓图");
-    }
+    };
 
     goPlaybackByHWND = function ( arg_map ) {
         var obj = document.getElementById("DPSDK_OCX");
@@ -134,7 +135,22 @@ tjx.app.monitor.camera= (function () {
 
         var	nRet = obj.DPSDK_StartTimePlaybackByHWND(hWnd, szCameraId, nRecordSource, nStartTime, nEndTime);
         ShowCallRetInfo(nRet, "视频");
-    }
+    };
+
+    goDownloadVideo = function ( arg_map ) {
+        var obj = document.getElementById("DPSDK_OCX");
+        var szCameraId =  stateMap.deviceid;
+        var nRecordSource = '3';
+        var strStartTime = arg_map.starttime;
+        var strEndTime = arg_map.endtime;
+        var nStartTime = getDate(strStartTime).getTime()/1000;
+        var nEndTime = getDate(strEndTime).getTime()/1000;
+        var mydate=new Date();
+        var reg=new RegExp(":","g");
+        var path="c:\\ajhb_cctv\\"+mydate.toLocaleString().replace(" ","").replace("年","").replace("月","").replace("日","").replace(reg,"")+".dav";
+        alert("存储路径："+path);
+        ShowCallRetInfo(obj.DPSDK_DownloadRecordByTime(path, szCameraId, nRecordSource, nStartTime, nEndTime), "按时间下载");
+    };
 
     goPlay = function ( deviceid )
     {
@@ -156,7 +172,7 @@ tjx.app.monitor.camera= (function () {
 
       /*  var	nRet = obj.DPSDK_StartRealplayByHWND(hWnd, szCameraId, nStreamType, nMediaType, nTransType);*/
         ShowCallRetInfo(nRet, "播放视频");
-    }
+    };
 
     goPlayByHWND = function ( deviceid )
     {
@@ -182,7 +198,7 @@ tjx.app.monitor.camera= (function () {
             ShowCallRetInfo(obj.DPSDK_SetIvsShowFlagByHWND(hWnd, 2, 1),"目标框显示");//打开目标框显示
             ShowCallRetInfo(obj.DPSDK_SetIvsShowFlagByHWND(hWnd, 3, 1),"轨迹线显示");//打开轨迹线显示
         }
-    }
+    };
 
     onLogin = function ()
     {
@@ -197,7 +213,7 @@ tjx.app.monitor.camera= (function () {
         {
             stateMap.bLogin = 1;
         }
-    }
+    };
 
 // example : getTrimmedString
     initCamera = function (  ){
@@ -218,14 +234,14 @@ tjx.app.monitor.camera= (function () {
         obj.DPSDK_SetToolBtnVisible(9, false);
         obj.DPSDK_SetControlButtonShowMode(1, 0);
         obj.DPSDK_SetControlButtonShowMode(2, 0);
-    }
+    };
 
     createWnd = function (  ) {
         var obj = document.getElementById("DPSDK_OCX");
         var nWndCount = configMap.camera_setting.wnd_num;
         obj.DPSDK_SetWndCount(stateMap.gWndId, nWndCount);
         obj.DPSDK_SetSelWnd(stateMap.gWndId, 0);
-    }
+    };
 
 
 //-------------------- END UTILITY METHODS -------------------
@@ -289,7 +305,8 @@ tjx.app.monitor.camera= (function () {
         goPlayback : goPlayback,
         goPlayPause : goPlayPause,
         goPlayResume : goPlayResume,
-        goPlayScreenShot : goPlayScreenShot
+        goPlayScreenShot : goPlayScreenShot,
+        goDownloadVideo : goDownloadVideo
     };
 //------------------- END PUBLIC METHODS ---------------------
 }());

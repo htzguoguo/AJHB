@@ -120,7 +120,7 @@ Namespace VB.Rest.SecurityInfoService
         Function AddCertification(ByVal item As SecurityInfo.CertificationContract, ByVal user As String) As ResponseContract
 
         <OperationContract()> _
-      <WebInvoke(Method:="PUT", RequestFormat:=WebMessageFormat.Json, ResponseFormat:=WebMessageFormat.Json, UriTemplate:="certification/{key}")> _
+        <WebInvoke(Method:="PUT", RequestFormat:=WebMessageFormat.Json, ResponseFormat:=WebMessageFormat.Json, UriTemplate:="certification/{key}")> _
         Function UpdateCertification(ByVal item As SecurityInfo.CertificationContract, ByVal key As String) As ResponseContract
 
         <OperationContract()> _
@@ -136,13 +136,13 @@ Namespace VB.Rest.SecurityInfoService
         Function AddOnsiteInspection(ByVal item As Inspection.OnSiteInspectionContract) As ResponseContract
 
         <OperationContract()> _
-       <WebInvoke(Method:="DELETE", RequestFormat:=WebMessageFormat.Json, ResponseFormat:=WebMessageFormat.Json, UriTemplate:="onsiteinspection/{key}")> _
+        <WebInvoke(Method:="DELETE", RequestFormat:=WebMessageFormat.Json, ResponseFormat:=WebMessageFormat.Json, UriTemplate:="onsiteinspection/{key}")> _
         Function DeleteOnsiteInspection(ByVal key As String) As ResponseContract
 
        
 
         <OperationContract()> _
-       <WebInvoke(Method:="POST", RequestFormat:=WebMessageFormat.Json, ResponseFormat:=WebMessageFormat.Json, UriTemplate:="chemicaldailyreport")> _
+        <WebInvoke(Method:="POST", RequestFormat:=WebMessageFormat.Json, ResponseFormat:=WebMessageFormat.Json, UriTemplate:="chemicaldailyreport")> _
         Function AddChemicalDailyReport(ByVal item As SecurityInfo.ChemicalContract) As ResponseContract
 
         <OperationContract()> _
