@@ -22,6 +22,11 @@
             <form class="form-horizontal form-bordered form-row-stripped">
 
                 <div class="form-body">
+                    <div class="note note-danger">
+                        <p>
+                            <strong>当天如果没有新入库危化品,请填0；库存量为当前危化品实际存量;填写时请注意单位。</strong>
+                        </p>
+                    </div>
 
                     <table id="batchreport" class="table table-bordered table-hover">
                         <thead>
@@ -29,10 +34,16 @@
                             <th width="30%">
                                危化品名称
                             </th>
-                            <th width="50%">
-                               日常用量(天)
+                            <th width="15%">
+                                入库量
                             </th>
-                            <th width="20%">
+                            <th width="15%">
+                               日使用量
+                            </th>
+                            <th width="15%">
+                                库存量
+                            </th>
+                            <th width="15%">
                                 单位
                             </th>
                          <!--   <th width="30%">
@@ -60,8 +71,8 @@
     </div>
 </div >
 
-<script type="text/javascript" src="css/glb/datatables/media/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+<!--<script type="text/javascript" src="css/glb/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="css/glb/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>-->
 <!--<script type="text/javascript" src="js/tjx.util.ui.input.js"></script>-->
 <script type="text/javascript" src="app/onsitecheck/js/tjx.data.onsitecheck.chemicaldailyreport.js"></script>
 <script type="text/javascript" src="app/onsitecheck/js/tjx.app.onsitecheck.chemicaldailybatchreport.js"></script>

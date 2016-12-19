@@ -80,10 +80,23 @@ tjx.app.onsitecheck.chemicaldailybatchreport = (function () {
         options.columnDefs = [
             {
                 "render": function ( data, type, row ) {
-                     return '	<input type="number" class="form-control  form-filter input-sm number-only" tjx-data-field="DailyDosageAmount" name="product_review_customer">';
+                    return '	<input type="number" class="form-control  form-filter input-sm number-only" tjx-data-field="UsageName"  name="product_review_customer">';
                 },
                 "targets": 1
+            },
+            {
+                "render": function ( data, type, row ) {
+                     return '	<input type="number" class="form-control  form-filter input-sm number-only" tjx-data-field="DailyDosageAmount" name="product_review_customer">';
+                },
+                "targets": 2
+            },
+            {
+                "render": function ( data, type, row ) {
+                    return '	<input type="number" class="form-control  form-filter input-sm number-only" tjx-data-field="MaximumStockingCapacityAmount"  name="product_review_customer">';
+                },
+                "targets": 3
             }
+
           /*  {
                 "render": function ( data, type, row ) {
                     return '	<input type="number" class="form-control form-filter input-sm number-only" tjx-data-field="MaximumStockingCapacityAmount" name="product_review_customer">';
@@ -123,10 +136,11 @@ tjx.app.onsitecheck.chemicaldailybatchreport = (function () {
                        'ChemicalCategory' : t[5],
                        'ChemicalName' :t[0],
                        'ChemicalNum' : t[6],
-                       'DailyDosageAmount' : $(this).children('td:eq(1)').children().val(),
+                       'DailyDosageAmount' : $(this).children('td:eq(2)').children().val(),
                        'DailyDosageUnit' :t[2],
-                       'MaximumStockingCapacityAmount' : t[4],
-                       'MaximumStockingCapacityUnit' : t[4]
+                       'MaximumStockingCapacityAmount' : $(this).children('td:eq(3)').children().val(),
+                       'MaximumStockingCapacityUnit' : t[4],
+                       'UsageName' : $(this).children('td:eq(1)').children().val()
                    }
 
                );
