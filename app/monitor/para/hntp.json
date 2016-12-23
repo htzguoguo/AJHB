@@ -15,6 +15,14 @@
         "deviceid": "1000333$1$0$98",
         "links": [
           {
+            "name": "厂区全景",
+            "url": "PPG航空材料（天津）有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$98"
+          },
+          {
             "name": "厂区门口",
             "url": "PPG航空材料（天津）有限公司",
             "type" : "pp",
@@ -65,20 +73,20 @@
         "deviceid": "1000009$1$0$219",
         "links": [
           {
-            "name": "厂房正门",
-            "url": "天津正达科技有限责任公司",
-            "type" : "pp",
-            "icon": "icon-camcorder",
-            "isActive": false,
-            "deviceid": "1000009$1$0$218"
-          },
-          {
             "name": "厂区全景",
             "url": "天津正达科技有限责任公司",
             "type" : "pp",
             "icon": "icon-camcorder",
             "isActive": false,
             "deviceid": "1000009$1$0$219"
+          },
+          {
+            "name": "厂房正门",
+            "url": "天津正达科技有限责任公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$218"
           },
           {
             "name": "聚合全景",
@@ -165,6 +173,14 @@
         "deviceid": "1000333$1$0$342",
         "links": [
           {
+            "name": "卸货区",
+            "url": "天津华宇股份有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$342"
+          },
+          {
             "name": "危品库2",
             "url": "天津华宇股份有限公司",
             "type" : "pp",
@@ -196,7 +212,6 @@
             "isActive": false,
             "deviceid": "1000333$1$0$346"
           }
-
         ]
       },
       {
@@ -207,6 +222,14 @@
         "isActive": false,
         "deviceid": "1000333$1$0$382",
         "links": [
+          {
+            "name": "全景",
+            "url": "滨海新区雪花啤酒有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000333$1$0$382"
+          },
           {
             "name": "出入口",
             "url": "滨海新区雪花啤酒有限公司",
@@ -368,6 +391,14 @@
         "deviceid": "1000009$1$0$256",
         "links": [
           {
+            "name": "出入口",
+            "url": "天津益源钢板有限公司",
+            "type" : "pp",
+            "icon": "icon-camcorder",
+            "isActive": false,
+            "deviceid": "1000009$1$0$256"
+          },
+          {
             "name": "值班室",
             "url": "天津益源钢板有限公司",
             "type" : "pp",
@@ -398,14 +429,6 @@
             "icon": "icon-camcorder",
             "isActive": false,
             "deviceid": "1000009$1$0$255"
-          },
-          {
-            "name": "出入口",
-            "url": "天津益源钢板有限公司",
-            "type" : "pp",
-            "icon": "icon-camcorder",
-            "isActive": false,
-            "deviceid": "1000009$1$0$256"
           }
         ]
       }

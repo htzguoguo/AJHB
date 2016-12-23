@@ -13,7 +13,10 @@ tjx.app.monitor.camera= (function () {
             $container : null,
             gWndId : null,
             bLogin : false,
-            deviceid : null
+            deviceid : null,
+            download_video : {
+                path : null
+            }
         },
         jqueryMap = {},
         setJqueryMap,
@@ -31,7 +34,8 @@ tjx.app.monitor.camera= (function () {
         goPlayPause,
         goPlayResume,
         goPlayScreenShot,
-        goDownloadVideo
+        goDownloadVideo, goDownloadVideoPause, goDownloadVideoResume, goDownloadVideoStop,
+        getSelectedWindowNum
         ;
 //----------------- END MODULE SCOPE VARIABLES ---------------
 //------------------- BEGIN UTILITY METHODS ------------------
@@ -140,7 +144,7 @@ tjx.app.monitor.camera= (function () {
     goDownloadVideo = function ( arg_map ) {
         var obj = document.getElementById("DPSDK_OCX");
         var szCameraId =  stateMap.deviceid;
-        var nRecordSource = '3';
+        var nRecordSource = '2';
         var strStartTime = arg_map.starttime;
         var strEndTime = arg_map.endtime;
         var nStartTime = getDate(strStartTime).getTime()/1000;
@@ -148,9 +152,28 @@ tjx.app.monitor.camera= (function () {
         var mydate=new Date();
         var reg=new RegExp(":","g");
         var path="c:\\ajhb_cctv\\"+mydate.toLocaleString().replace(" ","").replace("年","").replace("月","").replace("日","").replace(reg,"")+".dav";
+        stateMap.download_video.path = path;
         alert("存储路径："+path);
         ShowCallRetInfo(obj.DPSDK_DownloadRecordByTime(path, szCameraId, nRecordSource, nStartTime, nEndTime), "按时间下载");
     };
+
+    goDownloadVideoPause = function ()
+    {
+        var obj = document.getElementById("DPSDK_OCX");
+        ShowCallRetInfo(obj.DPSDK_PauseDownloadRecord(stateMap.download_video.path), "暂停下载");
+    }
+
+    goDownloadVideoResume = function ()
+    {
+        var obj = document.getElementById("DPSDK_OCX");
+        ShowCallRetInfo(obj.DPSDK_ResumeDownloadRecord(stateMap.download_video.path), "继续下载");
+    }
+
+    goDownloadVideoStop = function ()
+    {
+        var obj = document.getElementById("DPSDK_OCX");
+        ShowCallRetInfo(obj.DPSDK_StopDownloadRecord(stateMap.download_video.path), "停止下载");
+    }
 
     goPlay = function ( deviceid )
     {
@@ -172,6 +195,12 @@ tjx.app.monitor.camera= (function () {
 
       /*  var	nRet = obj.DPSDK_StartRealplayByHWND(hWnd, szCameraId, nStreamType, nMediaType, nTransType);*/
         ShowCallRetInfo(nRet, "播放视频");
+    };
+
+    getSelectedWindowNum = function () {
+        var obj = document.getElementById("DPSDK_OCX");
+        var nWndNo = obj.DPSDK_GetSelWnd(stateMap.gWndId);
+        return nWndNo;
     };
 
     goPlayByHWND = function ( deviceid )
@@ -306,7 +335,11 @@ tjx.app.monitor.camera= (function () {
         goPlayPause : goPlayPause,
         goPlayResume : goPlayResume,
         goPlayScreenShot : goPlayScreenShot,
-        goDownloadVideo : goDownloadVideo
+        goDownloadVideo : goDownloadVideo,
+        goDownloadVideoPause : goDownloadVideoPause,
+        goDownloadVideoResume : goDownloadVideoResume,
+        goDownloadVideoStop : goDownloadVideoStop,
+        getSelectedWindowNum : getSelectedWindowNum
     };
 //------------------- END PUBLIC METHODS ---------------------
 }());

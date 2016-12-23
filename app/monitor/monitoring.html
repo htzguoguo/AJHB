@@ -30,6 +30,23 @@
     <link href="css/hntp.css" rel="stylesheet" type="text/css">
     <link href="css/hntp.shell.index1.css" rel="stylesheet" type="text/css">
 
+    <script language="javascript" for="DPSDK_OCX" event="OnDownloadRecordProgress(szFileName,fProgress)">
+        document.getElementById("downloadvideoprogress").innerText = fProgress;
+    </script>
+
+    <script language="javascript" for="DPSDK_OCX" event="OnDownloadRecordComplete(szFileName)">
+        document.getElementById("downloadvideoprogress").innerText = 100;
+        alert("下载完成!");
+        document.getElementById("downloadvideoprogress").innerText = 0;
+
+        tjx.shell.publishEvent( 'tjx-monitor-download-end' );
+        //tjx.app.monitor.monitoring.onDownloadVideoComplete();
+       /* $( '#btndownload' ).removeAttr('disabled');
+        $( '#btndownloadpause' ).attr('disabled',"disabled");
+        $( '#btndownloadresume' ).attr('disabled',"disabled");
+        $( '#btndownloadstop' ).attr('disabled',"disabled");*/
+    </script>
+
     <style>
         .alert-info {
             background-color:#F4F4F4;
@@ -77,11 +94,37 @@
               </div>
 
               <div class="col-md-3 alert alert-block alert-info  fade in" >
-                  <div id="info" class="col-md-12 control-label"style="padding-top: 10px;"></div>
 
-                  <hr class="col-md-10">
+                <!--  <div class="profile-usermenu">
+                      <ul class="nav">
+                          <li class="active">
+                             <i class="icon-home"></i>
+                              <div id="info" class="col-md-12     control-label"style="padding-top: 10px;"></div>
+                          </li>
+                          <li>
+                                  <i class="icon-settings"></i>
 
-                  <div class="col-md-12 control-label " style="padding-bottom: 10px;">开始时间</div>
+
+                          </li>
+                          <li>
+                              <a href="page_todo.html" target="_blank">
+                                  <i class="icon-check"></i>
+                                  Tasks </a>
+                          </li>
+                          <li>
+                              <a href="extra_profile_help.html">
+                                  <i class="icon-info"></i>
+                                  Help </a>
+                          </li>
+                      </ul>
+                  </div>-->
+
+
+                  <div id="info" class="col-md-12     control-label"style="padding-top: 5px;"></div>
+
+                  <hr class="col-md-10 tjx-camera-hr">
+
+                  <div class="col-md-12 control-label " style="padding-bottom: 5px;">开始时间</div>
                   <div class="col-md-12"style="padding-bottom: 10px;padding-top: 10px;">
                       <div class="input-group date form_datetime ">
                           <input id="startdate" type="text" size="16" readonly class="form-control">
@@ -89,15 +132,10 @@
 															<button class="btn default date-set" type="button"><i class="fa fa-calendar"></i></button>
 															</span>
                       </div>
-                      <!--<div class="input-group  date form_datetime"  data-date-format="yyyy-mm-dd" data-date-viewmode="years" data-date-minviewmode="days">
-                          <input id="startdate" type="text" name="ExpirationDate"  tjx-data-field="ExpirationDate" class="form-control " >
-                                           <span class="input-group-btn">
-                                           <button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
-                                           </span>
-                      </div>-->
+
                   </div>
 
-                  <div class="col-md-12 control-label "style="padding-bottom: 10px;padding-top: 10px;">结束时间</div>
+                  <div class="col-md-12 control-label "style="padding-bottom: 5px;padding-top: 5px;">结束时间</div>
                   <div class="col-md-12"style="padding-bottom: 10px;padding-top: 10px;">
                       <div class="input-group date form_datetime ">
                           <input id="enddate" type="text" size="16" readonly class="form-control">
@@ -105,58 +143,35 @@
 															<button class="btn default date-set" type="button"><i class="fa fa-calendar"></i></button>
 															</span>
                       </div>
-                      <!-- <div class="input-group  date form_datetime"  data-date-format="yyyy-mm-dd" data-date-viewmode="years" data-date-minviewmode="days">
-                           <input id="enddate" type="text" name="ExpirationDate"  tjx-data-field="ExpirationDate" class="form-control " >
-                                            <span class="input-group-btn">
-                                            <button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
-                                            </span>
-                       </div>-->
                   </div>
-
-                  <hr class="col-md-10">
-
-                  <div class="col-md-12 control-label "style="padding-bottom: 10px;">回放</div>
-                  <div class="col-md-12"style="padding-bottom: 10px;padding-top: 10px;">
+                  <div class="col-md-12 alert alert-success" style="padding-bottom: 10px;padding-top: 10px;padding-left: 10px;">
+                      <strong>当前进度：</strong><span id="downloadvideoprogress">0</span> %
+                  </div>
+                  <hr class="col-md-10 tjx-camera-hr">
+                  <div class="col-md-12 control-label "style="padding-bottom: 5px;">录像</div>
+                  <div class="col-md-12"style="padding-bottom: 5px;padding-top: 5px;">
+                      <button id="btnrecordstart" class="btn blue btn-sm"title="开始">开始</button>
+                      <button  id="btnrecordstop"   class="btn blue btn-sm  " title="结束">结束</button>
+                      <button  id="btnrecordcancel"   class="btn blue btn-sm  " title="取消">取消</button>
+                  </div>
+                  <hr class="col-md-10 tjx-camera-hr">
+                  <div class="col-md-12 control-label "style="padding-bottom: 5px;">回放</div>
+                  <div class="col-md-12"style="padding-bottom: 5px;padding-top: 5px;">
                       <button id="btnplayback" class="btn blue btn-sm"title="回放">回放</button>
                       <button  id="btnplaypause"   class="btn blue btn-sm  " title="暂停">暂停</button>
                       <button  id="btnplayresume"  class="btn blue btn-sm  " title="继续">播放</button>
                       <button id="btnplayscreenshot"  class="btn blue btn-sm  " title="截图">截图</button>
                   </div>
-                  <!--<div class="col-md-12"style="padding-bottom: 10px;">-->
-                      <!--<button  id="btnplaydownload"  class="btn blue btn-sm  " title="下载">下载</button>-->
-                      <!--<button  id="btnplayrefresh"  class="btn blue btn-sm  " title="刷新">刷新</button>-->
-                      <!--<button  id="btnplayalarm"  class="btn blue btn-sm  " title="警报">警报</button>-->
-                      <!--<button  id="btnplayclose"  class="btn blue btn-sm  " title="关闭">关闭</button>-->
-                  <!--</div>-->
-                  <!--<div class="col-md-12"style="padding-bottom: 10px;">-->
-                      <!--<button  id="btnplayvolume-off"  class="btn blue btn-sm  " title="静音">静音</button>-->
-                      <!--<button  id="btnplayvolume-up"  class="btn blue btn-sm  " title="增大音量">增大音量</button>-->
-                      <!--<button  id="btnplayvolume-down"  class="btn blue btn-sm  " title="减小音量">减小音量</button>-->
-                  <!--</div>-->
-
-                  <hr class="col-md-10">
-
-                  <div class="col-md-12 control-label "style="padding-bottom: 10px;">下载</div>
+                  <hr class="col-md-10 tjx-camera-hr">
+                  <div class="col-md-12 control-label "style="padding-bottom: 5px;">下载</div>
                   <div class="col-md-12"style="padding-bottom: 10px;padding-top: 10px;">
                       <button id="btndownload" class="btn blue btn-sm"title="下载">下载</button>
                       <button  id="btndownloadpause"   class="btn blue btn-sm  " title="暂停">暂停</button>
                       <button  id="btndownloadresume"  class="btn blue btn-sm  " title="继续">继续</button>
-                      <button id="btndownloadstop"  class="btn blue btn-sm  " title="停止">停止</button>
+                      <button id="btndownloadstop"  class="btn blue btn-sm  " title="取消">取消</button>
                   </div>
-                <!--  <div class="col-md-12"style="padding-bottom: 10px;">
-                      <button  id="btnplayrate1"  class="btn blue btn-sm  " title="1倍">1X</button>
-                      <button  id="btnplayrate2"  class="btn blue btn-sm  " title="2倍">2X</button>
-                      <button  id="btnplayrate3"  class="btn blue btn-sm  " title="3倍">3X</button>
-                      <button  id="btnplayrate4"  class="btn blue btn-sm  " title="4倍">4X</button>
-                      <button  id="btnplayrate5"  class="btn blue btn-sm  " title="5倍">5X</button>
-                  </div>
-                  <div class="col-md-12"style="padding-bottom: 10px;">
-                      <button  id="btnplayrate11"  class="btn blue btn-sm  " title="1倍">1 -</button>
-                      <button  id="btnplayrate22"  class="btn blue btn-sm  " title="2倍">2 -</button>
-                      <button  id="btnplayrate33"  class="btn blue btn-sm  " title="3倍">3-</button>
-                      <button  id="btnplayrate44"  class="btn blue btn-sm  " title="4倍">4 -</button>
-                      <button  id="btnplayrate55"  class="btn blue btn-sm  " title="5倍">5 -</button>
-                  </div>-->
+
+
 
               </div>
               <!--<div class="col-md-12 alert alert-block alert-info  fade in" >-->
@@ -309,6 +324,7 @@
     //
     jQuery(document).ready(
             function () {
+                tjx.shell.initModule( jQuery('body') );
                 tjx.util.ui.initModule(jQuery('body'));
                 tjx.app.monitor.monitoring.initModule(jQuery('body'));
             /*    tjx.app.monitor.map.initModule(jQuery('body'));*/

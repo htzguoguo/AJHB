@@ -240,3 +240,20 @@ body {
     display:block;
     margin:auto;
 }
+
+.profile-usermenu {
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+.profile-usermenu ul li {
+    border-bottom: 1px solid #5b9bd1;
+    color: #5b9bd1;
+    background-color: #f6f9fb;
+    border-left: 2px solid #5b9bd1;
+    margin-left: -2px;
+}
+
+.tjx-camera-hr {
+    margin: 10px 0;
+}
